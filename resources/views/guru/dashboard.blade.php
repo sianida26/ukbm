@@ -115,14 +115,16 @@
         @keyframes animate {
 
             0%{
-                transform: translateY(0) rotate(0deg);
+                transform: rotate(0deg);
                 opacity: 1;
+                bottom: 0%;
                 border-radius: 0;
             }
 
             100%{
-                transform: translateY(-1000px) rotate(720deg);
-                opacity: 0;
+                transform: rotate(720deg);
+                opacity: 0.3;
+                bottom: 100%;
                 border-radius: 50%;
             }
 
@@ -130,20 +132,14 @@
     </style>
 </head>
 <body class="montserrat tw-relative tw-w-screen tw-min-h-screen tw-overflow-x-hidden tw-bg-gray-50" style="scrollbar-width: none;">
-    <ul class="circles">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
     {{-- topbar --}}
     <x-top-bar />
+
+    <ul class="circles">
+        @for($i = 1; $i <= 10; $i++)
+            <li></li>
+        @endfor
+    </ul>
 
     {{-- main content --}}
     <main class="tw-px-4 lg:tw-px-8">
@@ -183,5 +179,11 @@
 
     {{-- copyright --}}
     <p class="tw-text-center tw-font-medium tw-text-gray-500 tw-my-4">&copy; Firda Amalia 2021</p>
+
+    <script>
+        window.addEventListener('load', function(){
+            document.scrollTo(0, 0);
+        });
+    </script>
 </body>
 </html>
