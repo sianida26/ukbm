@@ -24,11 +24,25 @@ class AuthController extends Controller
         $request->validate($rules, $messages);
         if (Auth::attempt(['username' => $request->username, 'password' => $request->password])){
             $request->session()->regenerate();
+
+            $user = Auth::user();
+            if ($user->hasRole('guru')){
+                return redirect()->route('dashboard');
+            }
+
             return redirect()->intended('home');
         } else {
             return back()->withErrors([
                 'error' => 'Username atau password salah',
             ]);
         }
+    }
+
+    //Logout route
+    public function logout(Request $request){
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect()->route('login');
     }
 }

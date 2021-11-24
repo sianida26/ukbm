@@ -23,6 +23,16 @@ Route::middleware('auth')->group(function () {
     Route::get('/home', function(){
         return view('welcome');
     })->name('home');
+
+    Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+
+    //RUTE UNTUK GURU
+    Route::group(['middleware' => ['role:guru']], function () {
+        
+        Route::get('/dashboard', function(){
+            return view('guru.dashboard');
+        })->name('dashboard');
+    });
 });
 
 Route::middleware('guest')->group(function(){

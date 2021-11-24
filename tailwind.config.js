@@ -1,3 +1,6 @@
+//import tailwind colors
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   purge: [
     './resources/**/*.blade.php',
@@ -6,7 +9,12 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        orange: colors.orange,
+        sky: colors.sky,
+      },
+    },
   },
   variants: {
     extend: {},
