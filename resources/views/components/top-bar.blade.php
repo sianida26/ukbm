@@ -7,8 +7,10 @@
     </div>
 
     {{-- right side --}}
-    <div>
+    <div class="tw-flex tw-items-center tw-gap-2">
+        {{-- name --}}
+        <span class="tw-hidden lg:tw-inline tw-font-bold">{{Illuminate\Support\Facades\Auth::user()->name}}</span>
         {{-- profile --}}
-        <i class="bi bi-person-circle tw-text-2xl"></i>
+        <a href="/profil" class="bi bi-person-circle tw-text-2xl"></a>
     </div>
 </div>

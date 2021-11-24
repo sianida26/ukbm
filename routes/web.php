@@ -24,6 +24,10 @@ Route::middleware('auth')->group(function () {
         return view('welcome');
     })->name('home');
 
+    Route::get('/profil', function(){
+        return view('profile');
+    })->name('profile');
+
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
     //RUTE UNTUK GURU
