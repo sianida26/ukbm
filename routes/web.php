@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\KelasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +37,13 @@ Route::middleware('auth')->group(function () {
         Route::get('/dashboard', function(){
             return view('guru.dashboard');
         })->name('dashboard');
+
+        Route::get('/kelas', [KelasController::class, 'index']);
+        Route::delete('/kelas/delete', [KelasController::class, 'destroy'])->name('kelas.destroy');
+        Route::get('/kelas/buat', [KelasController::class, 'viewCreate']);
+        Route::post('/kelas/create', [KelasController::class, 'create'])->name('kelas.create');
+        Route::post('/kelas/edit', [KelasController::class, 'edit'])->name('kelas.editView');
+        Route::post('/kelas/submitEdit', [KelasController::class, 'editSubmit'])->name('kelas.edit');
     });
 });
 

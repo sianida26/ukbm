@@ -10,10 +10,7 @@
     <title>Document</title>
     @include('styles.tailwind')
     @include('styles.bootstrapicons')
-
-    <style>
-        
-    </style>
+    @include('styles.bubbles')
 </head>
 <body class="montserrat tw-relative tw-w-screen tw-min-h-screen tw-overflow-x-hidden tw-bg-gray-50" style="scrollbar-width: none;">
     {{-- topbar --}}
