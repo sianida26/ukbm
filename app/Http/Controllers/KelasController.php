@@ -36,7 +36,6 @@ class KelasController extends Controller
         return redirect('/kelas')->with('alert-success', 'Data berhasil ditambahkan!');
     }
 
-
     //view create
     public function viewCreate(Request $request){
         return view('guru.kelas.form', ['isEdit' => false]);

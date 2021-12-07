@@ -65,7 +65,7 @@
                             <tr class="tw-border-b tw-border-gray-300 ">
                                 <td class="tw-py-1">{{$i+1}}</td>
                                 <td class="tw-py-1">{{$class->name}}</td>
-                                <td class="tw-py-1">40</td>
+                                <td class="tw-py-1">{{$class->siswa->count()}}</td>
                                 <td>
                                     {{-- on mobile --}}
                                     <div class="tw-relative tw-inline-block tw-py-1 md:tw-hidden">

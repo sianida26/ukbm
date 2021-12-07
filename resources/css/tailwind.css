@@ -12,3 +12,9 @@
 .montserrat {
     font-family: 'Montserrat', sans-serif;
 }
+
+@layer components {
+    .highlight {
+        @apply tw-py-1 tw-px-2 tw-font-medium tw-rounded-lg;
+    }
+}

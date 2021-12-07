@@ -11,9 +11,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        coolGray: colors.coolGray,
+        emerald: colors.emerald,
+        fuchsia: colors.fuchsia,
         orange: colors.orange,
+        teal: colors.teal,
+        trueGray: colors.trueGray,
         sky: colors.sky,
         rose: colors.rose,
+        warmGray: colors.warmGray,
       },
     },
   },

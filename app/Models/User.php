@@ -12,6 +12,17 @@ use Laravel\Passport\HasApiTokens;
 
 class User extends Authenticatable
 {
+    /**
+     * id: unsigned bigint(20), primary key, auto increment
+     * name: varchar(255)
+     * username: varchar(255), index key,
+     * email_verified_at: timestamp, nullable,
+     * password: varchar(255)
+     * remember_token: varchar(100), nullable,
+     * created_at: timestamp, nullable
+     * modified_at: timestamp, nullable
+     */
+
     use HasApiTokens, HasFactory, Notifiable, HasRoles;
 
     /**
@@ -22,6 +33,7 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'username',
         'password',
     ];
 
@@ -43,4 +55,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    //has one siswa
+    public function siswa()
+    {
+        return $this->hasOne('App\Models\Siswa');
+    }
 }
