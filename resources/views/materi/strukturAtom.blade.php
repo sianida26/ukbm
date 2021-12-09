@@ -72,48 +72,96 @@
             menyusunnya. Partikel – partikel tersebut antara lain; <span class="highlight">elektron,proton dan neutron.</span></p>
         <h1 class="tw-text-black tw-font-semibold tw-pb-1 tw-border-black tw-text-xl tw-border-b tw-text-left">Elektron</h1>
 
-        <p class="tw-mt-4">Room provides an abstraction layer over SQLite to allow for more robust database access while harnessing the full power of SQLite. Simply saying Room is an abstract layer over SQLite to provide simplified coding. Nowadays we can see many applications using Room because of the benefits it’s providing. If you are using SQLite in your apps, please migrate to Room. The Room persistence library is very handy and easy to use.</p>
+        <p class="tw-mt-4">Pernahkah kalian memperhatikan tabung televisi? Tabung televisi merupakan
+            tabung sinar katode. Percobaan tabung sinar katode pertama kali dilakukan oleh
+            William Crookes (1875). Hasil eksperimennya yaitu ditemukannya seberkas sinar
+            yang muncul dari arah katode menuju ke anode yang disebut sinar katode. George
+            Johnstone Stoney (1891) yang mengusulkan nama sinar katode disebut “elektron“.
+            Kelemahan dari Stoney tidak dapat menjelaskan pengaruh elektron terhadap
+            perbedaan sifat antara atom suatu unsur dengan atom dalam unsur lainnya.
+            
+            Antoine Henri Becquerel (1896) menentukan sinar yang dipancarkan dari unsur-
+            unsur radioaktif yang sifatnya mirip dengan elektron. Joseph John Thomson
+            
+            (1897) melanjutkan eksperimen William Crookes. yaitu pengaruh medan listrik
+            dan medan magnet dalam tabung sinar katode.</p>
 
-        <h2 class="tw-text-black tw-font-semibold tw-mt-4">Why use Room?</h2>
-        <ol class="tw-list-decimal tw-list-outside tw-pl-4">
-            <li>We can eliminate most of the boilerplate code related to SQLite database</li>
-            <li>In the case of SQLite, There is no compile-time verification of raw SQLite queries. But in Room, there is a compile-time verification of SQL queries.  <strong class="tw-py-1 tw-px-2 tw-bg-gray-300 tw-text-sky-700 tw-font-medium tw-rounded-lg">@Query</strong>  and  <strong class="tw-py-1 tw-px-2 tw-bg-gray-300 tw-text-sky-700 tw-font-medium tw-rounded-lg">@Entity</strong>  are checked at the compile time to eliminate issues at runtime. It not only checks for the syntax but also the missing tables.</li>
-            <li>Easier to implement and maintain.</li>
-            <li>The Room is built to work with LiveData and RxJava for data observation, while SQLite does not.</li>
+            {{-- Gambar tabung sinar katoda --}}
+        <div class="tw-flex tw-items-center tw-flex-col tw-gap-4 tw-justify-center tw-mt-4">
 
-        </ol>
-
-        <h1 class="tw-text-black tw-font-semibold tw-pb-1 tw-border-black tw-text-xl tw-border-b tw-text-left tw-mt-4">Components of Room</h1>
-        
-        <p class="tw-mt-4">Before digging into code, let's understand the fundamentals of Room. There are mainly three components we need to know. They are:</p>
-
-        <h2 class="tw-text-black tw-font-semibold tw-mt-4">Entity</h2>
-        <p class="">An <strong class="tw-text-black">entity</strong> represents a table within the database. The Room creates a table for each class that has @Entity annotation. Each field in the class is a column in the table and we can give a specific name to that column by annotating that field with @ColumnInfo (name = “column_name”). There should be at least one primary key field for each table which we specify using annotation @PrimaryKey.</p>
-
-        <h2 class="tw-text-black tw-font-semibold tw-mt-4">DAO</h2>
-        <p class=""> <strong class="tw-text-black">Data Access Object (DAO)</strong> is an interface with annotation @Dao, which contains the methods used for accessing the database. We will create abstract methods in Dao to perform CRUD operations. The room supports the following annotations in Dao @Insert, @Update, @Delete, @Query. Previously we worked with Cursor objects in SQLite, but with Dao we simply define the respective queries with annotations. Everything is simplified.</p>
-
-        <h2 class="tw-text-black tw-font-semibold tw-mt-4">Database</h2>
-        <p>The <strong class="tw-text-black">database</strong> contains the database holder and serves as the main access point for the underlying connection to your app’s persisted, relational data. The class that’s annotated with @Database and should satisfy the following conditions:</p>
-        <ul class="tw-list-disc tw-list-outside tw-pl-4 tw-mt-4">
-            <li>Be an abstract class that extends RoomDatabase.</li>
-            <li>Include the list of all entities and database version associated with the database.</li>
-            <li>Contain an abstract method that has zero arguments and returns the class that is annotated with @Dao.</li>
-        </ul>
-
-        <p class="tw-mt-4">The attribute version is used to define the version of the database and entities are used to define the list of all tables this database will contain. At runtime, you can acquire an instance of Databse by calling Room.databaseBuilder() or Room.inMemoryDatabaseBuilder().</p>
-
-        {{-- alert --}}
-        <div class="tw-my-4 tw-bg-sky-200 tw-rounded-lg tw-flex">
-            <div class="tw-bg-sky-700 tw-w-12 tw-flex tw-justify-center tw-items-center tw-text-white tw-flex-shrink-0 tw-rounded-l-lg">
-                <i class="bi bi-info-circle-fill tw-text-2xl"></i>
-            </div>
-
-            {{-- alert content --}}
-            <div class="tw-flex-grow tw-py-4 tw-px-4">
-                Starting from Room 2.1.0-alpha01, DAO methods annotated with @Insert ,  @Delete  or  @Update  supports Rx return types Completable ,  Maybe<T>  and  Single<T> .
+            <div class="tw-flex tw-flex-col tw-items-center">
+                <img src="{{asset('/storage/assets/cathode-ray-tube.jpg')}}" alt="Percobaan tabung sinar katoda" class="">
+                <p class="tw-text-sm tw-text-center tw-mt-2">Percobaan tabung sinar katoda</p>
             </div>
         </div>
+
+        <p class="tw-mt-4">Hasil percobaan J.J. Thomson menunjukkan bahwa sinar katode dapat dibelokkan
+            ke arah kutub positif medan listrik. Hal ini membuktikan terdapat partikel
+            bermuatan negatif dalam suatu atom.Besarnya muatan dalam elektron ditemukan
+            oleh Robert Andrew Milikan (1908) melalui percobaan tetes minyak Milikan
+            seperti gambar berikut.</p>
+
+        {{-- Gambar tetes minyak milikan --}}
+        <div class="tw-flex tw-items-center tw-flex-col tw-gap-4 tw-justify-center tw-mt-4">
+
+            <div class="tw-flex tw-flex-col tw-items-center">
+                <img src="{{asset('/storage/assets/millikan_result.jpg')}}" alt="Percobaan tetes minyak millikan" class="">
+                <p class="tw-text-sm tw-text-center tw-mt-2">Percobaan tetes minyak Millikan</p>
+            </div>
+        </div>
+
+        <p class="tw-mt-4">Minyak disemprotkan ke dalam tabung yang bermuatan listrik. Akibat gaya tarik
+            gravitasi akan mengendapkan tetesan minyak yang turun. Apabila tetesan minyak
+            diberi muatan negatif maka akan tertarik ke kutub positif medan listrik. Dari hasil
+            percobaan Milikan dan Thomson diperoleh muatan elektron –1 dan massa elektron
+            0</p>
+
+        <h1 class="tw-text-black tw-font-semibold tw-pb-1 tw-border-black tw-text-xl tw-border-b tw-text-left tw-mt-4">Proton</h1>
+        
+        <p class="tw-mt-4">Jika massa elektron 0 berarti suatu partikel tidak mempunyai massa. Namun pada
+            kenyataannya partikel materi mempunyai massa yang dapat diukur dan atom
+            bersifat atom itu netral. Bagaimana mungkin atom itu bersifat netral dan
+            mempunyai massa, jika hanya ada elektron saja dalam atom?
+            Eugene Goldstein (1886) melakukan eksperimen dari tabung gas yang memiliki
+            katode, yang diberi lubang - lubang dan diberi muatan listrik.</p>
+
+        {{-- Gambar percobaan goldstein --}}
+        <div class="tw-flex tw-items-center tw-flex-col tw-gap-4 tw-justify-center tw-mt-4">
+
+            <div class="tw-flex tw-flex-col tw-items-center">
+                <img src="{{asset('/storage/assets/goldstein_experiment.jpg')}}" alt="Percobaan Goldstein" class="">
+                <p class="tw-text-sm tw-text-center tw-mt-2">Percobaan Goldstein</p>
+            </div>
+        </div>
+
+        <p class="tw-mt-4">
+            Hasil eksprerimen tersebut membuktikan bahwa pada saat terbentuk elektron
+            yang menuju anode, terbentuk pula sinar positif yang menuju arah berlawanan
+            melewati lubang pada katode. Setelah berbagai gas dicoba dalam tabung ini,
+            ternyata gas hidrogenlah yang menghasilkan sinar muatan positif yang paling kecil
+            baik massa maupun muatannya, sehingga partikel inidisebut dengan proton.
+            Massa proton = 1 sma (satuan massa atom) dan muatan proton = +1.
+        </p>
+
+        <h1 class="tw-text-black tw-font-semibold tw-pb-1 tw-border-black tw-text-xl tw-border-b tw-text-left tw-mt-4">Neutron</h1>
+        <p class="tw-mt-4">Prediksi dari Rutherford memacu W. Bothe dan H. Becker (1930) melakukan
+            eksperimen penembakan partikel alfa pada inti atom berilium (Be) dan dihasilkan
+            radiasi partikel berdaya tembus tinggi. Eksperimen ini dilanjutkan oleh James
+            Chadwick (1932).</p>
+
+        {{-- Gambar percobaan Chadwick --}}
+        <div class="tw-flex tw-items-center tw-flex-col tw-gap-4 tw-justify-center tw-mt-4">
+
+            <div class="tw-flex tw-flex-col tw-items-center">
+                <img src="{{asset('/storage/assets/chadwick_experiment.png')}}" alt="Percobaan Chadwick" class="">
+                <p class="tw-text-sm tw-text-center tw-mt-2">Percobaan Chadwick</p>
+            </div>
+        </div>
+
+        <p class="tw-mt-4">Chadwick mengamati bahwa berilium yang ditembak dengan partikel α
+            memancarkan suatu partikel yang mempunyai daya tembus yang sangat tinggi dan
+            tidak dipengaruhi oleh medan magnet maupun medan listrik. Partikel ini bersifat
+            netral atau tidak bermuatan.</p>
     </main>
 
     {{-- navigation --}}
