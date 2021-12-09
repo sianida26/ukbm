@@ -1,6 +1,6 @@
 <?php
-    $title = "Страница не найдена";
-    $subtitle = "Ошибка 404";
+    $title = "Struktur Atom";
+    $subtitle = "Membahas tentang atom dan isinya";
     $coverUrl = "https://picsum.photos/800/400";
     $coverDescription = "";
 ?>
@@ -54,7 +54,7 @@
                 {{-- name --}}
                 <div class="tw-w-full tw-flex tw-flex-col tw-items-center">
                     <p>Diketik dengan &#10084;&#65039; oleh <strong>Firda Amalia</strong></p>
-                    <p>Dibuat pada tanggal 16 April 2001</p>
+                    <p>Dibuat pada tanggal 8 Desember 2021</p>
                 </div>
             </div>
 
@@ -67,9 +67,11 @@
     
     {{-- content --}}
     <main class="tw-px-4 tw-mt-8 tw-text-gray-700 tw-text-lg tw-text-justify tw-max-w-screen-md tw-mx-auto">
-        <h1 class="tw-text-black tw-font-semibold tw-pb-1 tw-border-black tw-text-xl tw-border-b tw-text-left">What is Room Database?</h1>
+        <p class="tw-mt-4">Berdasarkan perkembangan teori atom yang sudah kalian pelajari sebelumnya,dapat
+            disimpulkan bahwa di dalam atom terdapat inti atom dan partikel-partikel yang
+            menyusunnya. Partikel – partikel tersebut antara lain; <span class="highlight">elektron,proton dan neutron.</span></p>
+        <h1 class="tw-text-black tw-font-semibold tw-pb-1 tw-border-black tw-text-xl tw-border-b tw-text-left">Elektron</h1>
 
-        <p class="tw-mt-4">While developing some applications like chat apps, we need a local database to store the data to handle cases like decrease frequent loading or offline handling, etc. If you are a developer from ages back, you might have used the SQLite database with an SQLiteOpenHelper class to perform database operations. As time passed, many libraries flourished to make developer's life easier. One such library is Room.</p>
         <p class="tw-mt-4">Room provides an abstraction layer over SQLite to allow for more robust database access while harnessing the full power of SQLite. Simply saying Room is an abstract layer over SQLite to provide simplified coding. Nowadays we can see many applications using Room because of the benefits it’s providing. If you are using SQLite in your apps, please migrate to Room. The Room persistence library is very handy and easy to use.</p>
 
         <h2 class="tw-text-black tw-font-semibold tw-mt-4">Why use Room?</h2>

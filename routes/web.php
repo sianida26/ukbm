@@ -66,6 +66,8 @@ Route::middleware('auth')->group(function () {
             Route::view('/', 'materi.index');
             Route::view('/pendahuluan', 'materi.pendahuluan')->name('materi.pendahuluan');
             Route::view('/teori-atom', 'materi.teoriAtom')->name('materi.teoriAtom');
+            Route::view('/perkembangan-model-atom', 'materi.perkembanganModel')->name('materi.perkembanganModel');
+            Route::view('/struktur-atom', 'materi.strukturAtom')->name('materi.strukturAtom');
         });
 
         Route::view('/cara-penggunaan', 'siswa.caraPenggunaan');
@@ -79,3 +81,7 @@ Route::middleware('guest')->group(function(){
     
     Route::post('/login', [AuthController::class, 'login'] )->name('login');
 });
+
+//TODO: delete this
+//NGLviewer playground
+Route::view('/ngl-playground', 'nglPlayground');

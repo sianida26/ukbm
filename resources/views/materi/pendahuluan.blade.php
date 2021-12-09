@@ -19,7 +19,7 @@
 
         <span>
             @if(Auth::user()->hasRole('guru'))
-                <a href="/dashboard" class="bi bi-house-fill tw-text-white tw-text-2xl"></a>
+                <a href="/dashboard" class="bi bi-house-fill tw-text-2xl"></a>
             @endif
         </span>
         
@@ -62,7 +62,7 @@
     <main class="tw-px-4 tw-mt-8 tw-text-gray-700 tw-text-lg tw-text-justify tw-max-w-screen-md tw-mx-auto">
         {{-- <h1 class="tw-text-black tw-font-semibold tw-pb-1 tw-border-black tw-text-xl tw-border-b tw-text-left">What is Room Database?</h1> --}}
 
-        <p class="tw-mt-4">Pernahkah kalian mendengar cerita tentang ilmuwan jenius Marie Curie? Perempuan yang memiliki sejumlah gelar dengan imbuhan <strong>“pertama”</strong> dan <strong>“satu-satunya”</strong>. </p>
+        <p class="tw-mt-4">Pernahkah kalian mendengar cerita tentang ilmuwan jenius <strong>Marie Curie</strong>? Perempuan yang memiliki sejumlah gelar dengan imbuhan <strong>“pertama”</strong> dan <strong>“satu-satunya”</strong>. </p>
         <p class="tw-mt-4">Dia adalah perempuan pertama yang meraih Penghargaan Nobel, profesor pertama di Universitas Paris dan perempuan satu-satunya yang memperoleh Penghargaan Nobel untuk dua kategori.</p>
         <p class="tw-mt-4">Bersama suaminya, Pierre Curie, ia menemukan unsur polonium dan radium. Dan Setelah kematian Pierre, ia mengembangkan lebih lanjut mengenai sinar-X.</p>
         <p class="tw-mt-4">Marie Curie lahir dari keluarga yang biasa-biasa saja, ayahnya seorang guru dan ia merupakan bungsu dari 5 bersaudara, sehingga ia sudah harus menjadi seorang pengajar dan pengasuh sejak kecil untuk mencukupi kebutuhan dan pendidikannya. Namun itu tidak menurunkan semangatnya untuk terus belajar hingga dapat menempuh pendidikan di Sorbonne University. Ia memanfaatkan waktu luangnya dengan membaca buku fisika, kimia, dan matematika. Dengan kegigihan dan ketekunannya bersama Pierre dalam melakukan penelitian, Marie menerima gelar doktor ilmu pengetahuan pada Juni 1903 dan, bersama Pierre, dia dianugerahi Medali Davy dari Royal Society dan pada tahun yang sama, mereka berbagi dengan Becquerel sebagai penerima Penghargaan Nobel Fisika untuk penemuan radioaktif.</p>

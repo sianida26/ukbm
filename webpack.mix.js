@@ -13,5 +13,7 @@ const mix = require('laravel-mix');
 
 // mix.js('resources/js/app.js', 'public/js')
 mix.postCss('resources/css/tailwind.css', 'public/css', [
-    require("tailwindcss"),
-]);
+        require("tailwindcss"),
+    ])
+    .js('resources/js/three-playground.js', 'public/js')
+    .js('resources/js/perkembanganModel.js', 'public/js')

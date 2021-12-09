@@ -71,13 +71,13 @@
 
         <div class="tw-flex tw-items-center tw-flex-col tw-gap-4 md:tw-flex-row md:tw-justify-between">
             {{-- democritus image --}}
-            <div>
+            <div class="tw-flex tw-items-center tw-justify-center">
                 <img src="{{asset('/storage/assets/democritus.jpg')}}" alt="democritus" class="tw-h-64">
                 <p class="tw-text-sm tw-text-center tw-mt-2">Democritus (460 - 370 BC)</p>
             </div>
 
             {{-- dalton image --}}
-            <div>
+            <div class="tw-flex tw-items-center tw-justify-center">
                 <img src="{{asset('/storage/assets/dalton.jpg')}}" alt="John Dalton" class="tw-h-64">
                 <p class="tw-text-sm tw-text-center tw-mt-2">John Dalton (1766 - 1844)</p>
             </div>
@@ -102,8 +102,8 @@
             <i class="bi bi-arrow-left"></i>
             <p>Pendahuluan</p>
         </a>
-        <a class="tw-gap-4 tw-rounded-md tw-border tw-flex tw-border-sky-500 tw-px-3 tw-py-2 tw-justify-end" href="{{route('materi.teoriAtom')}}">
-            <p>Teori Tentang Atom</p>
+        <a class="tw-gap-4 tw-rounded-md tw-border tw-flex tw-border-sky-500 tw-px-3 tw-py-2 tw-justify-end" href="{{route('materi.perkembanganModel')}}">
+            <p>Perkembangan Model Atom</p>
             <i class="bi bi-arrow-right"></i>
         </a>
     </div>

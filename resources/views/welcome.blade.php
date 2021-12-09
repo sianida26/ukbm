@@ -4,13 +4,12 @@
     $navs = collect([
         ['Pendahuluan', route('materi.pendahuluan')],
         ['A. Teori Tentang Atom', route('materi.teoriAtom')],
-        ['B. Struktur Atom dan Perkembangan Model Atom', '#'],
-        ['C. Tanda Atom', '#'],
-        ['D. Model Atom Niels Bohr dan Konfigurasi Elektron', '#'],
-        ['E. Teori Atom Mekanika Kuantum', '#'],
-        ['F. Sistem Periodik Unsur', '#'],
+        ['B. Perkembangan Model Atom', route('materi.perkembanganModel')],
+        ['C. Struktur Atom', route('materi.strukturAtom')],
+        ['D. Tanda Atom', '#'],
+        ['E. Sistem Periodik Unsur', '#'],
         ['Ujian AKhir', '#'],
-    ])
+    ]);
 ?>
 <!DOCTYPE html>
 <html lang="en">
