@@ -68,6 +68,8 @@ Route::middleware('auth')->group(function () {
             Route::view('/teori-atom', 'materi.teoriAtom')->name('materi.teoriAtom');
             Route::view('/perkembangan-model-atom', 'materi.perkembanganModel')->name('materi.perkembanganModel');
             Route::view('/struktur-atom', 'materi.strukturAtom')->name('materi.strukturAtom');
+            Route::view('/tanda-atom', 'materi.tandaAtom')->name('materi.tandaAtom');
+            Route::view('/mekanika-kuantum', 'materi.kuantum')->name('materi.mekanikaKuantum');
         });
 
         Route::view('/cara-penggunaan', 'siswa.caraPenggunaan');

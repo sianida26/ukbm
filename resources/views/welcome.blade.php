@@ -6,8 +6,9 @@
         ['A. Teori Tentang Atom', route('materi.teoriAtom')],
         ['B. Perkembangan Model Atom', route('materi.perkembanganModel')],
         ['C. Struktur Atom', route('materi.strukturAtom')],
-        ['D. Tanda Atom', '#'],
-        ['E. Sistem Periodik Unsur', '#'],
+        ['D. Tanda Atom', route('materi.tandaAtom')],
+        ['E. Teori Atom Mekanika Kuantum', route('materi.mekanikaKuantum')],
+        ['F. Sistem Periodik Unsur', '#'],
         ['Ujian AKhir', '#'],
     ]);
 ?>

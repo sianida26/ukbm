@@ -7,8 +7,24 @@
     <title>Document</title>
 </head>
 <body>
+    <span>\(\sum_{i=1}^n a_i\)</span>
     <div id="container" style="width:200px; height:200px;"></div>
-
+    <script>
+        window.MathJax = {
+            tex: {
+                // inlineMath: [['$', '$'], ['\\(', '\\)']]
+                packages: {'[+]': ['mhchem']}
+            },
+            svg: {
+                fontCache: 'global'
+            },
+            loader: {load: ['[tex]/mhchem']},
+        };
+    </script>
+    {{-- <script src="mathjax-config.js" defer></script> --}}
+    <script type="text/javascript" id="MathJax-script" defer
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
     <script src="/js/three-playground.js"></script>
 
     {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> --}}

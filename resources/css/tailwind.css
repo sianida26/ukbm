@@ -16,5 +16,8 @@
 @layer components {
     .highlight {
         @apply tw-py-1 tw-px-2 tw-font-medium tw-rounded-lg;
+        -webkit-box-decoration-break: clone;
+        -o-box-decoration-break: clone;
+        box-decoration-break: clone;
     }
 }
