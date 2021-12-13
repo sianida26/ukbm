@@ -70,6 +70,7 @@ Route::middleware('auth')->group(function () {
             Route::view('/struktur-atom', 'materi.strukturAtom')->name('materi.strukturAtom');
             Route::view('/tanda-atom', 'materi.tandaAtom')->name('materi.tandaAtom');
             Route::view('/mekanika-kuantum', 'materi.kuantum')->name('materi.mekanikaKuantum');
+            Route::view('/sistem-periodik-unsur', 'materi.spu')->name('materi.spu');
         });
 
         Route::view('/cara-penggunaan', 'siswa.caraPenggunaan');

@@ -47,6 +47,22 @@ function initXXX(){
     const cube = new THREE.Mesh(geometry, material);
     xxxScene.add(cube);
 
+    //shell orbit
+    for (let i = 1; i <= 2; i++) {
+        const shellGeometry = new THREE.CircleGeometry(10*i, 60);
+        const shellEdges = new THREE.EdgesGeometry(shellGeometry);
+        const shell = new THREE.LineSegments(shellEdges, new THREE.LineBasicMaterial({color: 0x000000}));
+        // shell.rotation.x = Math.PI / 2;
+        xxxScene.add(shell);
+    }
+
+    //electron
+    let electronGeometry = new THREE.SphereGeometry(2, 50, 50, 0, Math.PI * 2, 0, Math.PI * 2);
+    let electronMaterial = new THREE.MeshStandardMaterial({color: 0xff0000});
+    let electron = new THREE.Mesh(electronGeometry, electronMaterial);
+    electron.position.set(10, 0, 0);
+    xxxScene.add(electron)
+
     //lights
     const light = new THREE.PointLight(0xFFFFFF, 0.5);
     light.position.set( 0, 0, 50 );
@@ -55,6 +71,8 @@ function initXXX(){
     const ambientLight = new THREE.AmbientLight(0x808080 , 1);
     xxxScene.add(ambientLight);
 
+    //Clock
+    xxxClock = new THREE.Clock();
 }
 
 function onWindowResize() {
@@ -72,7 +90,8 @@ function animateXXX() {
 
     xxxControls.update(); // only required if xxxControls.enableDamping = true, or if xxxControls.autoRotate = true
 
-    // let t = xxxClock.getElapsedTime();
+    let t = xxxClock.getElapsedTime();
+    console.log(t)
 
     render();
 
