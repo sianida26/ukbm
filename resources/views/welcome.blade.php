@@ -8,7 +8,7 @@
         ['C. Struktur Atom', route('materi.strukturAtom')],
         ['D. Tanda Atom', route('materi.tandaAtom')],
         ['E. Teori Atom Mekanika Kuantum', route('materi.mekanikaKuantum')],
-        ['F. Sistem Periodik Unsur', '#'],
+        ['F. Sistem Periodik Unsur', route('materi.spu')],
         ['Ujian AKhir', '#'],
     ]);
 ?>

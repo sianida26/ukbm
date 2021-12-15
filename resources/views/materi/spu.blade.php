@@ -1,6 +1,6 @@
 <?php
-    $title = "Страница не найдена";
-    $subtitle = "Ошибка 404";
+    $title = "Sistem Periodik Unsur";
+    $subtitle = "Sejarah dan sifat-sifat keperiodikan";
     $coverUrl = "https://picsum.photos/800/400";
     $coverDescription = "";
 ?>
@@ -67,51 +67,181 @@
     
     {{-- content --}}
     <main class="tw-px-4 tw-mt-8 tw-text-gray-700 tw-text-lg tw-text-justify tw-max-w-screen-md tw-mx-auto">
-        <h1 class="tw-text-black tw-font-semibold tw-pb-1 tw-border-black tw-text-xl tw-border-b tw-text-left">What is Room Database?</h1>
+        <p class="tw-mt-4">Untuk mempelajari unsur yang begitu banyak, diperlukan suatu cara agar mudah untuk mengenali sifat-sifatnya. Salah satunya adalah dengan menggunakan <span class="highlight tw-bg-blue-300 tw-text-blue-800">sistem periodik unsur</span>. Sistem periodik unsur merupakan suatu sistem yang sangat baik untuk mempelajari kecenderungan sifat-sifat suatu unsur. Bahkan dapat digunakan untuk "meramal" sifat-sifat unsur yang belum ditemukan.</p>
 
-        <p class="tw-mt-4">While developing some applications like chat apps, we need a local database to store the data to handle cases like decrease frequent loading or offline handling, etc. If you are a developer from ages back, you might have used the SQLite database with an SQLiteOpenHelper class to perform database operations. As time passed, many libraries flourished to make developer's life easier. One such library is Room.</p>
-        <p class="tw-mt-4">Room provides an abstraction layer over SQLite to allow for more robust database access while harnessing the full power of SQLite. Simply saying Room is an abstract layer over SQLite to provide simplified coding. Nowadays we can see many applications using Room because of the benefits it’s providing. If you are using SQLite in your apps, please migrate to Room. The Room persistence library is very handy and easy to use.</p>
+        <h1 class="tw-text-black tw-font-semibold tw-pb-1 tw-border-black tw-text-xl tw-border-b tw-text-left tw-mt-4">Perkembangan Sistem Periodik</h1>
 
-        <h2 class="tw-text-black tw-font-semibold tw-mt-4">Why use Room?</h2>
-        <ol class="tw-list-decimal tw-list-outside tw-pl-4">
-            <li>We can eliminate most of the boilerplate code related to SQLite database</li>
-            <li>In the case of SQLite, There is no compile-time verification of raw SQLite queries. But in Room, there is a compile-time verification of SQL queries.  <strong class="tw-py-1 tw-px-2 tw-bg-gray-300 tw-text-sky-700 tw-font-medium tw-rounded-lg">@Query</strong>  and  <strong class="tw-py-1 tw-px-2 tw-bg-gray-300 tw-text-sky-700 tw-font-medium tw-rounded-lg">@Entity</strong>  are checked at the compile time to eliminate issues at runtime. It not only checks for the syntax but also the missing tables.</li>
-            <li>Easier to implement and maintain.</li>
-            <li>The Room is built to work with LiveData and RxJava for data observation, while SQLite does not.</li>
+        <h2 class="tw-text-black tw-font-semibold tw-mt-4">Triade Döbereiner</h2>
+        <p class="tw-mt-4">Pada tahun 1829, Johann Wolfgang Döbereiner mempelajari sifat-sifat beberapa unsur yang sudah dikenal saat itu. Dari unsur-unsur yang dipelajari, didapatkan suatu pola tertentu. yaitu bila unsur-unsur dikelompokkkan berdasarkan kesamaan sifat dan diurutkan massa atomnya, maka di setiap kelompok terdapat tiga unsru di mana massa unsur yang di tengah merupakan rata-rata dari massa unsur yang di tepi. Tiga unsur yang sifatnya mirip ini disebut dengan <span class="highlight tw-bg-blue-300 tw-text-blue-800">Triade Döbereiner</span>.</p>
 
-        </ol>
+        <table class="tw-mt-4 tw-mx-auto tw-w-full tw-max-w-screen-sm tw-text-center tw-border tw-border-collapse tw-border-black">
+            <thead>
+                <tr class="tw-font-semibold">
+                    <td class="tw-w-1/5 tw-border tw-border-black">Triade 1</td>
+                    <td class="tw-w-1/5 tw-border tw-border-black">Triade 2</td>
+                    <td class="tw-w-1/5 tw-border tw-border-black">Triade 3</td>
+                    <td class="tw-w-1/5 tw-border tw-border-black">Triade 4</td>
+                    <td class="tw-w-1/5 tw-border tw-border-black">Triade 5</td>
+                </tr>
+            </thead>
 
-        <h1 class="tw-text-black tw-font-semibold tw-pb-1 tw-border-black tw-text-xl tw-border-b tw-text-left tw-mt-4">Components of Room</h1>
-        
-        <p class="tw-mt-4">Before digging into code, let's understand the fundamentals of Room. There are mainly three components we need to know. They are:</p>
+            <tbody>
+                <tr>
+                    <td class="tw-border tw-border-black">Li</td>
+                    <td class="tw-border tw-border-black">Ca</td>
+                    <td class="tw-border tw-border-black">S</td>
+                    <td class="tw-border tw-border-black">Cl</td>
+                    <td class="tw-border tw-border-black">Mn</td>
+                </tr>
+                <tr>
+                    <td class="tw-border tw-border-black">Na</td>
+                    <td class="tw-border tw-border-black">Sr</td>
+                    <td class="tw-border tw-border-black">Se</td>
+                    <td class="tw-border tw-border-black">Br</td>
+                    <td class="tw-border tw-border-black">Cr</td>
+                </tr>
+                <tr>
+                    <td class="tw-border tw-border-black">K</td>
+                    <td class="tw-border tw-border-black">Ba</td>
+                    <td class="tw-border tw-border-black">Te</td>
+                    <td class="tw-border tw-border-black">I</td>
+                    <td class="tw-border tw-border-black">Fe</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="tw-text-center tw-text-sm tw-text-gray-700 tw-mt-2">Daftar unsur Triade Döbereiner</p>
 
-        <h2 class="tw-text-black tw-font-semibold tw-mt-4">Entity</h2>
-        <p class="">An <strong class="tw-text-black">entity</strong> represents a table within the database. The Room creates a table for each class that has @Entity annotation. Each field in the class is a column in the table and we can give a specific name to that column by annotating that field with @ColumnInfo (name = “column_name”). There should be at least one primary key field for each table which we specify using annotation @PrimaryKey.</p>
+        <h2 class="tw-text-black tw-font-semibold tw-mt-4">Teori Oktaf Newlands</h2>
+        <p class="tw-mt-4">Susunan tabel periodik yang dikemukakan oleh Oktaf Newlands didasarkan pada kenaikan massa atomnya dan setelah atom ke delapan, akan didapatkan sifat unsur yang mirip dengan sifat unsur pertama, unsur ke sembilan mirip dengan unsur ke dua, dan seterusnya.</p>
 
-        <h2 class="tw-text-black tw-font-semibold tw-mt-4">DAO</h2>
-        <p class=""> <strong class="tw-text-black">Data Access Object (DAO)</strong> is an interface with annotation @Dao, which contains the methods used for accessing the database. We will create abstract methods in Dao to perform CRUD operations. The room supports the following annotations in Dao @Insert, @Update, @Delete, @Query. Previously we worked with Cursor objects in SQLite, but with Dao we simply define the respective queries with annotations. Everything is simplified.</p>
+        <table class="tw-border tw-border-collapse tw-text-center tw-border-black tw-w-full tw-mt-4">
+            <tbody>
+                <tr>
+                    <td class="tw-border tw-border-black">H 1</td>
+                    <td class="tw-border tw-border-black">F 8</td>
+                    <td class="tw-border tw-border-black">Cl 15</td>
+                    <td class="tw-border tw-border-black">Co & Ni 22</td>
+                    <td class="tw-border tw-border-black">Br 29</td>
+                    <td class="tw-border tw-border-black">Pd 36</td>
+                    <td class="tw-border tw-border-black">I 42</td>
+                    <td class="tw-border tw-border-black">Pt & Ir 50</td>
+                </tr>
+                <tr>
+                    <td class="tw-border tw-border-black">Li 2</td>
+                    <td class="tw-border tw-border-black">Na 9</td>
+                    <td class="tw-border tw-border-black">K 16</td>
+                    <td class="tw-border tw-border-black">Cu 23</td>
+                    <td class="tw-border tw-border-black">Rb 30</td>
+                    <td class="tw-border tw-border-black">Ag 37</td>
+                    <td class="tw-border tw-border-black">Cs 44</td>
+                    <td class="tw-border tw-border-black">Os 51</td>
+                </tr>
+                <tr>
+                    <td class="tw-border tw-border-black">Be 3</td>
+                    <td class="tw-border tw-border-black">Mg 10</td>
+                    <td class="tw-border tw-border-black">Ca 17</td>
+                    <td class="tw-border tw-border-black">Zn 24</td>
+                    <td class="tw-border tw-border-black">Sr 31</td>
+                    <td class="tw-border tw-border-black">Cd 38</td>
+                    <td class="tw-border tw-border-black">Ba & V 45</td>
+                    <td class="tw-border tw-border-black">Hg 52</td>
+                </tr>
+                <tr>
+                    <td class="tw-border tw-border-black">B 4</td>
+                    <td class="tw-border tw-border-black">Al 11</td>
+                    <td class="tw-border tw-border-black">Cr 19</td>
+                    <td class="tw-border tw-border-black">Y 25</td>
+                    <td class="tw-border tw-border-black">Ce & La 33</td>
+                    <td class="tw-border tw-border-black">U 40</td>
+                    <td class="tw-border tw-border-black">Ta 46</td>
+                    <td class="tw-border tw-border-black">Ti 53</td>
+                </tr>
+                <tr>
+                    <td class="tw-border tw-border-black">C 5</td>
+                    <td class="tw-border tw-border-black">Si 12</td>
+                    <td class="tw-border tw-border-black">Ti 18</td>
+                    <td class="tw-border tw-border-black">In 26</td>
+                    <td class="tw-border tw-border-black">Zr 32</td>
+                    <td class="tw-border tw-border-black">Sn 39</td>
+                    <td class="tw-border tw-border-black">W 47</td>
+                    <td class="tw-border tw-border-black">Pb 54</td>
+                </tr>
+                <tr>
+                    <td class="tw-border tw-border-black">N 6</td>
+                    <td class="tw-border tw-border-black">P 13</td>
+                    <td class="tw-border tw-border-black">Mn 20</td>
+                    <td class="tw-border tw-border-black">As 27</td>
+                    <td class="tw-border tw-border-black">Di & Mo 34</td>
+                    <td class="tw-border tw-border-black">Sb 41</td>
+                    <td class="tw-border tw-border-black">Nb 48</td>
+                    <td class="tw-border tw-border-black">Bi 55</td>
+                </tr>
+                <tr>
+                    <td class="tw-border tw-border-black">O 7</td>
+                    <td class="tw-border tw-border-black">S 14</td>
+                    <td class="tw-border tw-border-black">Fe 21</td>
+                    <td class="tw-border tw-border-black">Se 28</td>
+                    <td class="tw-border tw-border-black">Rh & Ru 35</td>
+                    <td class="tw-border tw-border-black">Te 43</td>
+                    <td class="tw-border tw-border-black">Au 49</td>
+                    <td class="tw-border tw-border-black">Th 56</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="tw-text-center tw-text-sm tw-text-gray-700 tw-mt-2">Daftar unsur Oktaf Newlands</p>
 
-        <h2 class="tw-text-black tw-font-semibold tw-mt-4">Database</h2>
-        <p>The <strong class="tw-text-black">database</strong> contains the database holder and serves as the main access point for the underlying connection to your app’s persisted, relational data. The class that’s annotated with @Database and should satisfy the following conditions:</p>
-        <ul class="tw-list-disc tw-list-outside tw-pl-4 tw-mt-4">
-            <li>Be an abstract class that extends RoomDatabase.</li>
-            <li>Include the list of all entities and database version associated with the database.</li>
-            <li>Contain an abstract method that has zero arguments and returns the class that is annotated with @Dao.</li>
+        <h2 class="tw-text-black tw-font-semibold tw-mt-4">Sistem Periodik Mendeleev</h2>
+        <p class="tw-mt-4">Sistem periodik Mendeleev atau sistem periodik bentuk pendek dibuat oleh ilmuwan asal Rusia, Dmitri Ivanovich Mendeleev. Sistem periodik Mendeleev didasarkan atas kenaikan massa atom dan kemiripan sifat. </p>
+
+        <img src="{{asset('/storage/assets/mendeleev-periodic-table.png')}}" alt="" class="tw-max-w-lg tw-w-full tw-mx-auto tw-mt-4">
+        <p class="tw-text-sm tw-text-center tw-text-gray-700">Sistem Periodik Unsur Mendeleev</p>
+
+        <p class="tw-mt-4">Pada tabel periodik, lajur tegak dinamakan <span class="highlight tw-bg-blue-300 tw-text-blue-800">golongan</span>, sedangkan lajur mendatar disebut dengan <span class="highlight tw-bg-blue-300 tw-text-blue-800">periode</span>. Pada tabel periodik tersebut, dicantumkan pula sifat kimianya. Sebagai contoh: pada golongan I atau <em>Gruppe I</em>, terdapat rumus R<sup>2</sup>O yang menunjukkan bahwa golongan 1 tersebut bila membentuk oksida akan mempunyai rumus H<sub>2</sub>O, Li<sub>2</sub>O, dan Na<sub>2</sub>.</p>
+
+        <h2 class="tw-text-black tw-font-semibold tw-mt-4">Sistem Periodik Unsur Modern</h2>
+        <p class="tw-mt-4">Pada sebelum perang dunia I, Henry Moseley berhasil menemukan kesalahan pada tabel periodik yang dibuat oleh Dmitri Mendeleev, yaitu terdapat unsur yang letaknya terbalik. Moseley menemukan bahwa keperiodikan sifat tidak berdasarkan massa atom, tetapi didasarkan oleh nomor atom atau muatan inti. Susunan tabel periodik yang Ia susun akhirnya berkembang lebih baik sampai yang kita gunakan sekarang.</p>
+
+        <img src="{{asset('/storage/assets/tabel-periodik.svg')}}" alt="" class="tw-w-full tw-mx-auto tw-mt-4">
+        <p class="tw-text-sm tw-text-center tw-text-gray-700 tw-mt-4">Sistem Periodik Unsur. Untuk mode interaktif, <span class="tw-text-blue-500 tw-underline"><a href="https://www.rsc.org/periodic-table">klik di sini</a></span></p>
+
+        <h1 class="tw-text-black tw-font-semibold tw-pb-1 tw-border-black tw-text-xl tw-border-b tw-text-left tw-mt-4">Sifat-Sifat Keperiodikan</h1>
+        <p class="tw-mt-4">Dengan melihat sistem periodik, kita dapat melihat sifat-sifat yang dimiliki suatu unsur. Beberapa di antaranya adalah:</p>
+        <ul>
+            <li>Unsur-unsur yang terdapat pada golongan yang sama mempunyai kemiripan konfigurasi elektron sehingga unsur yang segolongan mempunyai sifat yang mirip.</li>
+            <li>Unsur-unsur yang terdapat dalam satu periode dari kiri ke kanan konfigurasi elektronnya berubah secara teratur. Hal ini berakibat pada perubahan sifat unsur secara teratur sehingga unsur-unsur dalam satu periode dari kiri ke kanan mempunyai sifat yang berubah secara teratur.</li>
         </ul>
 
-        <p class="tw-mt-4">The attribute version is used to define the version of the database and entities are used to define the list of all tables this database will contain. At runtime, you can acquire an instance of Databse by calling Room.databaseBuilder() or Room.inMemoryDatabaseBuilder().</p>
+        <h2 class="tw-text-black tw-font-semibold tw-mt-4">Sifat kelogaman</h2>
+        <img src="{{asset('/storage/assets/sifat-logam.png')}}" alt="" class="tw-max-w-lg tw-w-full tw-mx-auto tw-mt-4">
+        <p class="tw-mt-4">Dalam sistem periodik unsur, sifat logam dari kiri ke kanan semakin menurun, sedangkan dari atas ke bawah sifat kelogamannya semakin besar.</p>
 
-        {{-- alert --}}
-        <div class="tw-my-4 tw-bg-sky-200 tw-rounded-lg tw-flex">
-            <div class="tw-bg-sky-700 tw-w-12 tw-flex tw-justify-center tw-items-center tw-text-white tw-flex-shrink-0 tw-rounded-l-lg">
-                <i class="bi bi-info-circle-fill tw-text-2xl"></i>
-            </div>
+        <h2 class="tw-text-black tw-font-semibold tw-mt-4">Titik leleh dan Titik didih</h2>
+        <img src="{{asset('/storage/assets/BoilingPoint.gif')}}" alt="" class="tw-max-w-lg tw-w-full tw-mx-auto tw-mt-4">
+        <img src="{{asset('/storage/assets/MeltingPoint.gif')}}" alt="" class="tw-max-w-lg tw-w-full tw-mx-auto tw-mt-4">
+        <p class="tw-mt-4">Dalam sistem periodik unsur, dari atas ke bawah, Untuk unsur-unsur logam, titik leleh dan titik didihnya cenderung menurun, untuk unsur non logam cenderung meningkat.</p>
+        <p class="tw-mt-4">Sedangkan dari kiri ke kanan, titik lelehnya naik sampai maksimum pada golongan 15, kemudain turun seara teratur, sedangkan titik didih akan naik sampai maksimum pada golongan IIIA kemudian turun secara teratur.</p>
 
-            {{-- alert content --}}
-            <div class="tw-flex-grow tw-py-4 tw-px-4">
-                Starting from Room 2.1.0-alpha01, DAO methods annotated with @Insert ,  @Delete  or  @Update  supports Rx return types Completable ,  Maybe<T>  and  Single<T> .
-            </div>
-        </div>
+        <h2 class="tw-text-black tw-font-semibold tw-mt-4">Jari-Jari atom</h2>
+        <img src="{{asset('/storage/assets/jari-jari-atom.png')}}" alt="" class="tw-max-w-lg tw-w-full tw-mx-auto tw-mt-4">
+        <p class="tw-mt-4">Dalam sistem periodik unsur, jari-jari atom dalam satu periode dari kiri ke kanan cenderung semakin pendek. Hal ini dikarenakan muatan inti efektif semakin meningkat dari kiri ke kanan.</p>
+        <p class="tw-mt-4">Sedangkan dari atas ke bawah, jari-jari atom dalam satu golongan cenderung semakin meningkat dikarenakan bertambahnya kulit atom.</p>
+
+        <h2 class="tw-text-black tw-font-semibold tw-mt-4">Energi Ionisasi</h2>
+        <img src="{{asset('/storage/assets/ionisasi.png')}}" alt="" class="tw-max-w-lg tw-w-full tw-mx-auto tw-mt-4">
+        <p class="tw-mt-4">Energi Ionsisi Energi ionisasi adalah energi yang diperlukan oleh suatu atom untuk melepaskan elektron yang terikat paling lemah oleh suatu atom-atom atau ion dalam fase gas.</p>
+        <p class="tw-mt-4">Pada sistem periodik unsur, energi ionisasi unsur-unsur dalam satu periode dari kiri ke kanan cenderung semakin besar, dan energi ionisasi unsur-unsur segolongan dari atas ke bawah semakin kecil</p>
+
+        <h2 class="tw-text-black tw-font-semibold tw-mt-4">Afinitas elektron</h2>
+        <img src="{{asset('/storage/assets/afinitas-elektron.png')}}" alt="" class="tw-max-w-lg tw-w-full tw-mx-auto tw-mt-4">
+        <p class="tw-mt-4">Afinitas elektron adalah Besarnya energi yang dihasilkan apabila suatu atom menangkap sebuah elektron pada fase gas. Afinitas elektron dapat diartikan sebagai mudah atau tidaknya suatu atom untuk menerima elektron. Semakin besar afinitas elektronnya, maka atom tersebut lebih cenderung untuk menerima elektron menjadi ion negatif.</p>
+        <p class="tw-mt-4">Sifat keperiodikan afinitas elektron menyerupai dengan sifat keperiodikan energi ionsiasi.</p>
+
+        <h2 class="tw-text-black tw-font-semibold tw-mt-4">Keelektronegatifan</h2>
+        <img src="{{asset('/storage/assets/electronegativity_trends.png')}}" alt="" class="tw-max-w-lg tw-w-full tw-mx-auto tw-mt-4">
+        <p class="tw-mt-4">Keelektronegatifan adalah kecenderungan suatu atom dalam menarik pasangan elektron yang digunakan bersama dalam membentuk ikatan. Semakin besar nilai keelektronegatifan suatu atom, maka semakin mudah bagi atom tersebut untuk menarik pasangan elektron ikatan.</p>
+        <p class="tw-mt-4"><p class="tw-mt-4">Pada sistem periodik unsur, keelektronegatifan unsur-unsur dalam satu periode dari kiri ke kanan cenderung semakin besar, dan keelektronegatifan unsur-unsur segolongan dari atas ke bawah semakin kecil</p></p>
+
+        
     </main>
 
     {{-- navigation --}}
