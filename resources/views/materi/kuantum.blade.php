@@ -26,7 +26,7 @@
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.3/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
         onload="renderMathInElement(document.body);"></script>
 </head>
-<body class="roboto tw-bg-gray-100">
+<body class="roboto tw-bg-gray-100 tw-overflow-y-scroll">
 
     {{-- header --}}
     <div class="tw-flex tw-justify-between tw-items-center tw-px-4 tw-mt-4">

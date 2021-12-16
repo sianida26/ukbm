@@ -178,7 +178,7 @@
         <h1 class="tw-text-2xl tw-font-bold tw-text-center">PETA KONSEP</h1>
 
         <a href="{{asset('storage/assets/petakonsep-title.png')}}" class="tw-w-full tw-pt-4">
-            <img src="{{asset('storage/assets/petakonsep.png')}}" alt="peta konsep" class="tw-w-full tw-mt-4">
+            <img src="{{asset('storage/assets/peta-konsep.svg')}}" alt="peta konsep" class="tw-w-full tw-mt-4">
         </a>
 
         <hr class="tw-border-gray-500 tw-mt-8" />
