@@ -15,7 +15,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>{{$title}}</title>
-
+    @laravelPWA
     @include('styles.tailwind')
     @include('styles.bootstrapicons')
 

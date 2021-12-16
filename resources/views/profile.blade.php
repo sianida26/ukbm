@@ -12,6 +12,7 @@
     @include('styles.tailwind')
     @include('styles.bootstrapicons')
     @include('styles.bubbles')
+    @laravelPWA
 </head>
 <body class="tw-w-screen tw-min-h-screen montserrat tw-bg-gray-50">
     <x-top-bar />

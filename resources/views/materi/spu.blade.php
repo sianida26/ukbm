@@ -15,7 +15,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>{{$title}}</title>
-
+    @laravelPWA
     @include('styles.tailwind')
     @include('styles.bootstrapicons')
 
@@ -313,12 +313,12 @@
 
     {{-- navigation --}}
     <div class="tw-flex tw-flex-col md:tw-flex-row tw-gap-4 tw-justify-between tw-px-4 tw-max-w-screen-md tw-mx-auto tw-text-lg tw-font-semibold tw-text-sky-800 tw-mt-8">
-        <a class="tw-gap-4 tw-rounded-md tw-border tw-flex tw-border-sky-500 tw-px-3 tw-py-2" href="{{route('materi.pendahuluan')}}">
+        <a class="tw-gap-4 tw-rounded-md tw-border tw-flex tw-border-sky-500 tw-px-3 tw-py-2" href="{{route('materi.mekanikaKuantum')}}">
             <i class="bi bi-arrow-left"></i>
-            <p>Pendahuluan</p>
+            <p>Teori Atom Mekanika Kuantum</p>
         </a>
-        <a class="tw-gap-4 tw-rounded-md tw-border tw-flex tw-border-sky-500 tw-px-3 tw-py-2 tw-justify-end" href="{{route('materi.teoriAtom')}}">
-            <p>Teori Tentang Atom</p>
+        <a class="tw-gap-4 tw-rounded-md tw-border tw-hidden tw-border-sky-500 tw-px-3 tw-py-2 tw-justify-end" href="#">
+            <p>-</p>
             <i class="bi bi-arrow-right"></i>
         </a>
     </div>

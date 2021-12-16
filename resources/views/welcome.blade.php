@@ -9,7 +9,7 @@
         ['D. Tanda Atom', route('materi.tandaAtom')],
         ['E. Teori Atom Mekanika Kuantum', route('materi.mekanikaKuantum')],
         ['F. Sistem Periodik Unsur', route('materi.spu')],
-        ['Ujian AKhir', '#'],
+        // ['Ujian AKhir', '#'],
     ]);
 ?>
 <!DOCTYPE html>
@@ -22,6 +22,7 @@
 
     @include('styles.tailwind')
     @include('styles.bootstrapicons')
+    @laravelPWA
 
     @stack('styles')
     <style>
