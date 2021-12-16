@@ -169,7 +169,7 @@
             </div>
         </div>
 
-        <p class="tw-mt-4">Dengan mengukur muatan partikel pada sinar katoda, Thomson menyimpulkan bahwa partikel tersebut 2000 kali lebih ringan daripada atom hidrogen. Dan dengan mengubah logam yang digunakan pada katoda, Thomson menemukan bahwa partikel ini terdapat pada semua jenis unsur. Sehingga Thomson memberi nama partikel ini sebagai <span class="highlight tw-bg-gray-300 tw-text-red-700">elektron</span>. Sehiungga Thomson dapat memcahkan teori Dalton sebelumnya yang mengatakan bahwa atom tidak dapat dibagi lagi namun masih terdapat partikel sub atom di dalamnya. Dari penemuannya ini, Thomson mendapatkan hadiah Nobel pada bidang fisika pada tahun 1906.</p>
+        <p class="tw-mt-4">Dengan mengukur muatan partikel pada sinar katoda, Thomson menyimpulkan bahwa partikel tersebut 2000 kali lebih ringan daripada atom hidrogen. Dan dengan mengubah logam yang digunakan pada katoda, Thomson menemukan bahwa partikel ini terdapat pada semua jenis unsur. Sehingga Thomson memberi nama partikel ini sebagai <span class="highlight tw-bg-gray-300 tw-text-red-700">elektron</span>. Sehingga Thomson dapat memcahkan teori Dalton sebelumnya yang mengatakan bahwa atom tidak dapat dibagi lagi namun masih terdapat partikel sub atom di dalamnya. Dari penemuannya ini, Thomson mendapatkan hadiah Nobel pada bidang fisika pada tahun 1906.</p>
 
         <h2 class="tw-text-black tw-font-semibold tw-mt-4">Kelemahan Model Atom Thomson</h2>
         <ol class="tw-mt-4 tw-pl-4 tw-list-decimal tw-list-outside">
