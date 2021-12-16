@@ -70,7 +70,7 @@
         <p class="tw-mt-4">Berdasarkan perkembangan teori atom yang sudah kalian pelajari sebelumnya,dapat
             disimpulkan bahwa di dalam atom terdapat inti atom dan partikel-partikel yang
             menyusunnya. Partikel – partikel tersebut antara lain; <span class="highlight">elektron,proton dan neutron.</span></p>
-        <h1 class="tw-text-black tw-font-semibold tw-pb-1 tw-border-black tw-text-xl tw-border-b tw-text-left">Elektron</h1>
+        <h1 class="tw-text-black tw-font-semibold tw-pb-1 tw-border-black tw-text-xl tw-border-b tw-text-left tw-mt-4">Elektron</h1>
 
         <p class="tw-mt-4">Pernahkah kalian memperhatikan tabung televisi? Tabung televisi merupakan
             tabung sinar katode. Percobaan tabung sinar katode pertama kali dilakukan oleh
