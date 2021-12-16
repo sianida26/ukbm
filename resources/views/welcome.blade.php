@@ -93,13 +93,13 @@
             </div>
 
             {{-- title --}}
-            <div class="tw-flex tw-flex-col tw-flex-grow tw-flex-1 tw-justify-center tw-items-center tw-px-4 tw-gap-2 tw-max-w-screen-lg tw-self-center lg:tw-text-left lg:tw-items-start">
-                <h2 class="tw-text-2xl lg:tw-text-4xl tw-font-semibold">UKBM (Unit Kegiatan Belajar Mandiri)</h2>
-                <h1 class="tw-text-4xl lg:tw-text-6xl tw-font-bold">Struktur Atom dan Sistem Periodik Unsur</h1>
-                <span class="tw-self-start">Penyusun: Firda Amalia</span>
-                <span class="tw-self-start">Dosen Pembimbing: Drs. Ridwan Joharmawan, M.Si.</span>
+            <div class="tw-flex tw-flex-col tw-flex-grow tw-flex-1 tw-justify-center tw-px-4 tw-gap-2 tw-max-w-screen-lg tw-self-center lg:tw-text-left lg:tw-items-start">
+                <h2 class="tw-text-2xl lg:tw-text-4xl tw-font-semibold tw-text-center lg:tw-text-left">UKBM (Unit Kegiatan Belajar Mandiri)</h2>
+                <h1 class="tw-text-4xl lg:tw-text-6xl tw-font-bold tw-text-center lg:tw-text-left">Struktur Atom dan Sistem Periodik Unsur</h1>
+                <p class="tw-text-center lg:tw-text-left">Penyusun: Firda Amalia</p>
+                <p class="tw-text-center lg:tw-text-left">Dosen Pembimbing: Drs. Ridwan Joharmawan, M.Si.</p>
 
-                <button class="tw-mt-4 tw-bg-orange-500 lg:tw-text-lg tw-text-white tw-rounded-md tw-px-3 tw-py-2 tw-self-end">Ayo Mulai Belajar ^_^</button>
+                <button class="tw-mt-4 tw-bg-orange-500 lg:tw-text-lg tw-text-white tw-rounded-md tw-px-3 tw-py-2 tw-self-center lg:tw-self-end">Ayo Mulai Belajar ^_^</button>
             </div>
         </div>
 
@@ -177,7 +177,7 @@
     <section class="tw-px-6 tw-text-gray-700 tw-py-8">
         <h1 class="tw-text-2xl tw-font-bold tw-text-center">PETA KONSEP</h1>
 
-        <a href="{{asset('storage/assets/petakonsep.png')}}" class="tw-w-full tw-pt-4">
+        <a href="{{asset('storage/assets/petakonsep-title.png')}}" class="tw-w-full tw-pt-4">
             <img src="{{asset('storage/assets/petakonsep.png')}}" alt="peta konsep" class="tw-w-full tw-mt-4">
         </a>
 
