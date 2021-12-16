@@ -105,8 +105,8 @@
         <p class="tw-mt-4">Gagasan tersebut memberikan penjelasan kepada Hukum Perbandingan Tetap atau <span class="highlight tw-bg-gray-300 tw-text-green-700">Hukum Proust</span> yang dikemukakan oleh Joseph Proust (1754 - 1826) pada tahun 1799. Hipotesis Dalton ini mendorong para ilmuwan pada waktu itu untuk terus bereksperimen tentang atom.</p>
 
         {{-- soal --}}
-        <form class="tw-bg-orange-300 tw-rounded-lg tw-w-full tw-flex tw-flex-col tw-mt-4 tw-shadow-md tw-pb-4">
-
+        <form method="POST" action="{{route('jawaban.submit')}}" class="tw-bg-orange-300 tw-rounded-lg tw-w-full tw-flex tw-flex-col tw-mt-4 tw-shadow-md tw-pb-4">
+            @csrf
             <div class="tw-w-full tw-py-2 tw-rounded-t-lg tw-bg-orange-700 tw-text-white tw-text-center">
                 <h2 class="tw-text-white tw-font-semibold tw-text-lg">Soal</h2>
             </div>
@@ -114,10 +114,14 @@
             <ol class="tw-w-full tw-px-4 lg:tw-pl-12 lg:tw-pr-8 tw-flex tw-flex-col tw-text-black tw-text-base tw-list-outside tw-list-decimal">
                 
                 @foreach($soals as $soal)
+                    <?php 
+                        $jawabanModel = Jawaban::firstWhere(['user_id' => Auth::id(), 'soal_id' => $soal->id]);
+                        $jawaban = $jawabanModel ? $jawabanModel->jawaban : '';
+                    ?>
                     <div class="tw-w-full tw-mt-4">
                         <li>{!!$soal->soal!!}</li>
                         @if(Auth::user()->hasRole('siswa'))
-                            <input name="soal-{{$soal->id}}" type="text" placeholder="Ketikkan jawabanmu di sini" class="tw-bg-white tw-shadow-md tw-rounded-md tw-border-orange-600 tw-border focus:tw-ring-2 focus:tw-ring-orange-600 focus:tw-outline-none tw-px-4 tw-py-2 tw-w-full tw-mt-2">
+                            <input name="soal_{{$soal->id}}" value="{{$jawaban}}" type="text" placeholder="Ketikkan jawabanmu di sini" class="tw-bg-white tw-shadow-md tw-rounded-md tw-border-orange-600 tw-border focus:tw-ring-2 focus:tw-ring-orange-600 focus:tw-outline-none tw-px-4 tw-py-2 tw-w-full tw-mt-2">
                         @else
                             <p class="tw-mt-2 tw-font-semibold">Jawaban:</p>
                             <p class="tw-font-semibold">{!!$soal->kunci!!}</p>

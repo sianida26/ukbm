@@ -15,6 +15,10 @@ class CreateJawabansTable extends Migration
     {
         Schema::create('jawabans', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained();
+            $table->foreignId('soal_id')->constrained();
+            $table->float('nilai')->nullable();
+            $table->text('jawaban')->nullable();
             $table->timestamps();
         });
     }

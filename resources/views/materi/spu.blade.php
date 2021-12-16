@@ -214,8 +214,8 @@
         <p class="tw-text-sm tw-text-center tw-text-gray-700 tw-mt-4">Sistem Periodik Unsur. Untuk mode interaktif, <span class="tw-text-blue-500 tw-underline"><a href="https://www.rsc.org/periodic-table">klik di sini</a></span></p>
 
         {{-- soal sejarah spu --}}
-        <form class="tw-bg-orange-300 tw-rounded-lg tw-w-full tw-flex tw-flex-col tw-mt-4 tw-shadow-md tw-pb-4">
-
+        <form method="POST" action="{{route('jawaban.submit')}}" class="tw-bg-orange-300 tw-rounded-lg tw-w-full tw-flex tw-flex-col tw-mt-4 tw-shadow-md tw-pb-4">
+            @csrf
             <div class="tw-w-full tw-py-2 tw-rounded-t-lg tw-bg-orange-700 tw-text-white tw-text-center">
                 <h2 class="tw-text-white tw-font-semibold tw-text-lg">Soal</h2>
             </div>
@@ -223,10 +223,14 @@
             <ol class="tw-w-full tw-px-4 lg:tw-pl-12 lg:tw-pr-8 tw-flex tw-flex-col tw-text-black tw-text-base tw-list-outside tw-list-decimal">
                 
                 @foreach($soalSejarah as $soal)
+                    <?php 
+                        $jawabanModel = Jawaban::firstWhere(['user_id' => Auth::id(), 'soal_id' => $soal->id]);
+                        $jawaban = $jawabanModel ? $jawabanModel->jawaban : '';
+                    ?>
                     <div class="tw-w-full tw-mt-4">
                         <li>{!!$soal->soal!!}</li>
                         @if(Auth::user()->hasRole('siswa'))
-                            <input name="soal-{{$soal->id}}" type="text" placeholder="Ketikkan jawabanmu di sini" class="tw-bg-white tw-shadow-md tw-rounded-md tw-border-orange-600 tw-border focus:tw-ring-2 focus:tw-ring-orange-600 focus:tw-outline-none tw-px-4 tw-py-2 tw-w-full tw-mt-2">
+                            <input name="soal_{{$soal->id}}" value="{{$jawaban}}" type="text" placeholder="Ketikkan jawabanmu di sini" class="tw-bg-white tw-shadow-md tw-rounded-md tw-border-orange-600 tw-border focus:tw-ring-2 focus:tw-ring-orange-600 focus:tw-outline-none tw-px-4 tw-py-2 tw-w-full tw-mt-2">
                         @else
                             <p class="tw-mt-2 tw-font-semibold">Jawaban:</p>
                             <p class="tw-font-semibold">{!!$soal->kunci!!}</p>
@@ -281,8 +285,8 @@
         <p class="tw-mt-4"><p class="tw-mt-4">Pada sistem periodik unsur, keelektronegatifan unsur-unsur dalam satu periode dari kiri ke kanan cenderung semakin besar, dan keelektronegatifan unsur-unsur segolongan dari atas ke bawah semakin kecil</p></p>
 
         {{-- soal sifat keperiodikan --}}
-        <form class="tw-bg-orange-300 tw-rounded-lg tw-w-full tw-flex tw-flex-col tw-mt-4 tw-shadow-md tw-pb-4">
-
+        <form method="POST" action="{{route('jawaban.submit')}}" class="tw-bg-orange-300 tw-rounded-lg tw-w-full tw-flex tw-flex-col tw-mt-4 tw-shadow-md tw-pb-4">
+            @csrf
             <div class="tw-w-full tw-py-2 tw-rounded-t-lg tw-bg-orange-700 tw-text-white tw-text-center">
                 <h2 class="tw-text-white tw-font-semibold tw-text-lg">Soal</h2>
             </div>
@@ -290,10 +294,14 @@
             <ol class="tw-w-full tw-px-4 lg:tw-pl-12 lg:tw-pr-8 tw-flex tw-flex-col tw-text-black tw-text-base tw-list-outside tw-list-decimal">
                 
                 @foreach($soalSifat as $soal)
+                    <?php 
+                        $jawabanModel = Jawaban::firstWhere(['user_id' => Auth::id(), 'soal_id' => $soal->id]);
+                        $jawaban = $jawabanModel ? $jawabanModel->jawaban : '';
+                    ?>
                     <div class="tw-w-full tw-mt-4">
                         <li>{!!$soal->soal!!}</li>
                         @if(Auth::user()->hasRole('siswa'))
-                            <input name="soal-{{$soal->id}}" type="text" placeholder="Ketikkan jawabanmu di sini" class="tw-bg-white tw-shadow-md tw-rounded-md tw-border-orange-600 tw-border focus:tw-ring-2 focus:tw-ring-orange-600 focus:tw-outline-none tw-px-4 tw-py-2 tw-w-full tw-mt-2">
+                            <input name="soal_{{$soal->id}}" value="{{$jawaban}}" type="text" placeholder="Ketikkan jawabanmu di sini" class="tw-bg-white tw-shadow-md tw-rounded-md tw-border-orange-600 tw-border focus:tw-ring-2 focus:tw-ring-orange-600 focus:tw-outline-none tw-px-4 tw-py-2 tw-w-full tw-mt-2">
                         @else
                             <p class="tw-mt-2 tw-font-semibold">Jawaban:</p>
                             <p class="tw-font-semibold">{!!$soal->kunci!!}</p>

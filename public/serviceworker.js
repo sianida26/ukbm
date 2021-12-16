@@ -43,11 +43,24 @@ self.addEventListener('activate', event => {
 });
 
 // Serve from Cache
+// self.addEventListener("fetch", event => {
+//     event.respondWith(
+//         caches.match(event.request)
+//             .then(response => {
+//                 return response || fetch(event.request);
+//             })
+//             .catch(() => {
+//                 return caches.match(event.request);
+//             })
+//     )
+// });
+
+//network first
 self.addEventListener("fetch", event => {
     event.respondWith(
-        caches.match(event.request)
+        fetch(event.request)
             .then(response => {
-                return response || fetch(event.request);
+                return response;
             })
             .catch(() => {
                 return caches.match(event.request);

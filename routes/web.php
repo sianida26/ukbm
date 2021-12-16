@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\KelasController;
 use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\JawabanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -53,6 +54,11 @@ Route::middleware('auth')->group(function () {
             // Route::post('/{id}/submitEdit', [KelasController::class, 'siswaEditSubmit'])->name('siswa.editSubmit');
             // Route::delete('/{id}/delete', [KelasController::class, 'siswaDestroy'])->name('siswa.destroy');
         });
+    });
+
+    //RUTE UNTUK SISWA
+    Route::group(['middleware' => ['role:siswa']], function () {
+        Route::post('submitJawaban', [JawabanController::class, 'submitJawaban'])->name('jawaban.submit');
     });
 
     //RUTE UNTUK SISWA DAN GURU
