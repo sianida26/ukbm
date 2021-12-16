@@ -1,8 +1,11 @@
 <?php
+    use Illuminate\Support\Facades\Auth;
     $title = "Tanda Atom";
     $subtitle = "Sekilas materi mengenai notasi atom";
     $coverUrl = asset('/storage/assets/inti-atom.svg');
     $coverDescription = "Atom memiliki inti berupa proton dan neutron";
+
+    $soals = App\Models\Soal::where('subbab', 'B')->get();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -191,7 +194,34 @@
             <li>Contain an abstract method that has zero arguments and returns the class that is annotated with @Dao.</li>
         </ul>
 
-        <p class="tw-mt-4">The attribute version is used to define the version of the database and entities are used to define the list of all tables this database will contain. At runtime, you can acquire an instance of Databse by calling Room.databaseBuilder() or Room.inMemoryDatabaseBuilder().</p>
+        <p class="tw-mt-4">The attribute version is used to define the version of the database and entities are used to define the list of all tables this database will contain. At runtime, you can acquire an instance of Databse by calling Room.databaseBuilder() or Room.inMemoryDatabaseBuilder().</p> --}}
+        {{-- soal --}}
+        <form class="tw-bg-orange-300 tw-rounded-lg tw-w-full tw-flex tw-flex-col tw-mt-4 tw-shadow-md tw-pb-4">
+
+            <div class="tw-w-full tw-py-2 tw-rounded-t-lg tw-bg-orange-700 tw-text-white tw-text-center">
+                <h2 class="tw-text-white tw-font-semibold tw-text-lg">Soal</h2>
+            </div>
+
+            <ol class="tw-w-full tw-px-4 lg:tw-pl-12 lg:tw-pr-8 tw-flex tw-flex-col tw-text-black tw-text-base tw-list-outside tw-list-decimal">
+                
+                @foreach($soals as $soal)
+                    <div class="tw-w-full tw-mt-4">
+                        <li>{!!$soal->soal!!}</li>
+                        @if(Auth::user()->hasRole('siswa'))
+                            <input name="soal-{{$soal->id}}" type="text" placeholder="Ketikkan jawabanmu di sini" class="tw-bg-white tw-shadow-md tw-rounded-md tw-border-orange-600 tw-border focus:tw-ring-2 focus:tw-ring-orange-600 focus:tw-outline-none tw-px-4 tw-py-2 tw-w-full tw-mt-2">
+                        @else
+                            <p class="tw-mt-2 tw-font-semibold">Jawaban:</p>
+                            <p class="tw-font-semibold">{!!$soal->kunci!!}</p>
+                        @endif
+                    </div>
+                @endforeach
+            </ol>
+
+            <div class="tw-w-full tw-flex tw-justify-end tw-px-8 tw-text-base tw-pt-8">
+                <button type="submit" class="tw-rounded-md tw-bg-orange-700 tw-text-white tw-px-4 tw-py-2 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-orange-600 tw-shadow-md">Simpan Jawaban</button>
+            </div>
+
+        </form>
     </main>
 
     {{-- navigation --}}

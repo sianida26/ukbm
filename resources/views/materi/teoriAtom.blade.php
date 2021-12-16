@@ -1,8 +1,12 @@
 <?php
+
+    use Illuminate\Support\Facades\Auth;
+
     $title = "Teori Tentang Atom";
     $subtitle = "Penjelasan mendasar mengenai atom";
     $coverUrl = asset('storage/assets/rm373batch15-bg-05.jpg');
     $coverDescription = "Ilustrasi atom (sumber: <u><a href='https://www.freepik.com/vectors/design'>Freepik</a></u>)";
+    $soals = App\Models\Soal::where('subbab', 'A')->get();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,6 +21,11 @@
     @include('styles.bootstrapicons')
 
     @stack('styles')
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.3/dist/katex.min.css" integrity="sha384-ThssJ7YtjywV52Gj4JE/1SQEDoMEckXyhkFVwaf4nDSm5OBlXeedVYjuuUd0Yua+" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.3/dist/katex.min.js" integrity="sha384-Bi8OWqMXO1ta+a4EPkZv7bYGIes7C3krGSZoTGNTAnAn5eYQc7IIXrJ/7ck1drAi" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.3/dist/contrib/mhchem.min.js" integrity="sha384-LIgAiYlGSAdpNC9+YDjDPF6JeS/RRIumtNo0CmyQERZ/+g0h9MbuYQwf/5pQ4Y4M" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.3/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
 </head>
 <body class="roboto tw-bg-gray-100">
 
@@ -94,6 +103,34 @@
         <p class="tw-mt-4">Konsep tentang atom yang dikemukakan oleh John Dalton lebih rinci dan lebih jelas dibanding yang dikemukakan oleh Democritus. Dari hipotesis yang pertama, sebenarnya John Dalton juga tidak bisa menjelaskan secara rinci seperti apakah bentuk atom.</p>
         <p class="tw-mt-4">Akan tetapi, Dalton lebih realistis dengan menunjukkan bahwa atom dari unsur yang berbeda mempunyai ukuran dan sifat yang berbeda, misalnya ditunjukkan oleh perbedaan sifat antara unsur hidrogen dan oksigen karena keduanya disusun dari atom yang berbeda. Hipotesis yang kedua lebih menjelaskan bahwa bila dua atom yang berbeda bergabung dengan perbandingan jumlah atom yang berbeda, akan menghasilkan senyawa yang berbeda pula.</p>
         <p class="tw-mt-4">Gagasan tersebut memberikan penjelasan kepada Hukum Perbandingan Tetap atau <span class="highlight tw-bg-gray-300 tw-text-green-700">Hukum Proust</span> yang dikemukakan oleh Joseph Proust (1754 - 1826) pada tahun 1799. Hipotesis Dalton ini mendorong para ilmuwan pada waktu itu untuk terus bereksperimen tentang atom.</p>
+
+        {{-- soal --}}
+        <form class="tw-bg-orange-300 tw-rounded-lg tw-w-full tw-flex tw-flex-col tw-mt-4 tw-shadow-md tw-pb-4">
+
+            <div class="tw-w-full tw-py-2 tw-rounded-t-lg tw-bg-orange-700 tw-text-white tw-text-center">
+                <h2 class="tw-text-white tw-font-semibold tw-text-lg">Soal</h2>
+            </div>
+
+            <ol class="tw-w-full tw-px-4 lg:tw-pl-12 lg:tw-pr-8 tw-flex tw-flex-col tw-text-black tw-text-base tw-list-outside tw-list-decimal">
+                
+                @foreach($soals as $soal)
+                    <div class="tw-w-full tw-mt-4">
+                        <li>{!!$soal->soal!!}</li>
+                        @if(Auth::user()->hasRole('siswa'))
+                            <input name="soal-{{$soal->id}}" type="text" placeholder="Ketikkan jawabanmu di sini" class="tw-bg-white tw-shadow-md tw-rounded-md tw-border-orange-600 tw-border focus:tw-ring-2 focus:tw-ring-orange-600 focus:tw-outline-none tw-px-4 tw-py-2 tw-w-full tw-mt-2">
+                        @else
+                            <p class="tw-mt-2 tw-font-semibold">Jawaban:</p>
+                            <p class="tw-font-semibold">{!!$soal->kunci!!}</p>
+                        @endif
+                    </div>
+                @endforeach
+            </ol>
+
+            <div class="tw-w-full tw-flex tw-justify-end tw-px-8 tw-text-base tw-pt-8">
+                <button type="submit" class="tw-rounded-md tw-bg-orange-700 tw-text-white tw-px-4 tw-py-2 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-orange-600 tw-shadow-md">Simpan Jawaban</button>
+            </div>
+
+        </form>
     </main>
 
     {{-- navigation --}}

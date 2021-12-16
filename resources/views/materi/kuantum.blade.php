@@ -1,4 +1,7 @@
 <?php
+    use Illuminate\Support\Facades\Auth;
+    $soalKuantum = App\Models\Soal::where('subbab', 'kuantum')->get();
+    $soalKonfigurasi = App\Models\Soal::where('subbab', 'konfigurasi')->get();
     $title = "Teori Atom Mekanika Kuantum";
     $subtitle = "";
     $coverUrl = "https://picsum.photos/800/400";
@@ -191,6 +194,34 @@
         <img src="{{asset('/storage/assets/orbital-d.png')}}" alt="" class="tw-max-w-lg tw-w-full tw-mx-auto">
         <p class="tw-text-center tw-text-sm">Bentuk orbital <em>d</em></p>
 
+        {{-- soal kuantum --}}
+        <form class="tw-bg-orange-300 tw-rounded-lg tw-w-full tw-flex tw-flex-col tw-mt-4 tw-shadow-md tw-pb-4">
+
+            <div class="tw-w-full tw-py-2 tw-rounded-t-lg tw-bg-orange-700 tw-text-white tw-text-center">
+                <h2 class="tw-text-white tw-font-semibold tw-text-lg">Soal</h2>
+            </div>
+
+            <ol class="tw-w-full tw-px-4 lg:tw-pl-12 lg:tw-pr-8 tw-flex tw-flex-col tw-text-black tw-text-base tw-list-outside tw-list-decimal">
+                
+                @foreach($soalKuantum as $soal)
+                    <div class="tw-w-full tw-mt-4">
+                        <li>{!!$soal->soal!!}</li>
+                        @if(Auth::user()->hasRole('siswa'))
+                            <input name="soal-{{$soal->id}}" type="text" placeholder="Ketikkan jawabanmu di sini" class="tw-bg-white tw-shadow-md tw-rounded-md tw-border-orange-600 tw-border focus:tw-ring-2 focus:tw-ring-orange-600 focus:tw-outline-none tw-px-4 tw-py-2 tw-w-full tw-mt-2">
+                        @else
+                            <p class="tw-mt-2 tw-font-semibold">Jawaban:</p>
+                            <p class="tw-font-semibold">{!!$soal->kunci!!}</p>
+                        @endif
+                    </div>
+                @endforeach
+            </ol>
+
+            <div class="tw-w-full tw-flex tw-justify-end tw-px-8 tw-text-base tw-pt-8">
+                <button type="submit" class="tw-rounded-md tw-bg-orange-700 tw-text-white tw-px-4 tw-py-2 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-orange-600 tw-shadow-md">Simpan Jawaban</button>
+            </div>
+
+        </form>
+
         <h1 class="tw-text-black tw-font-semibold tw-pb-1 tw-border-black tw-text-xl tw-border-b tw-text-left tw-mt-4">Konfigurasi Elektron</h1>
         <h2 class="tw-text-black tw-font-semibold tw-mt-4">Aturan Aufbau</h2>
         <p class="tw-mt-4">Subkulit dengan energi terendah adalah subkulit 1<em>s</em> yang tersusun dari 1 orbital. 1 Elektron pada atom hidrogen akan menempati orbital 1<em>s</em> ketika pada keadaan dasar. Ketika kita berlanjut ke atom berikutnya, helium, litium, dan seterusnya, maka elektron akan menempati subkulit pada tingkat energi yang lebih tinggi. 2<em>s</em>, 2<em>p</em>, 3<em>s</em> dan seterusnya. Prinsip Aufbau mengatakan bahwa <span class="highlight tw-bg-yellow-300">elektron akan menempati orbital energi rendah ke orbital energi yang lebih tinggi secara berurutan</span>. Prinsip ini kadang disebut juga sebagai prinsip membangun. (<em>Aufbau</em> dalam bahasa Jerman berarti membangun). </p>
@@ -258,6 +289,34 @@
         </ul>
 
         <p class="tw-mt-4">Penyimpangan tersebut diketahui dari gambaran spektrumnya yang lebih cocok bila konfigurasi elektronnya digambarkan seperti yang menyimpang tersebut. Penyimpangan tersebut diperkirakan terjadi karena adanya perbedaan tingkat energi yang sangat kecil antara subkulit 3<em>d</em> dan 4<em>s</em>, serta antara subkulit 4<em>d</em> dan 5<em>s</em> pada masing-masing atom tersebut. Bahkan untuk paladium, energi subkulit 4<em>d</em> ternyata memang lebih rendah daripada 5<em>s</em>. Hal ini tidak berlaku untuk atom lainnya.</p>
+
+        {{-- soal konfigurasi elektron --}}
+        <form class="tw-bg-orange-300 tw-rounded-lg tw-w-full tw-flex tw-flex-col tw-mt-4 tw-shadow-md tw-pb-4">
+
+            <div class="tw-w-full tw-py-2 tw-rounded-t-lg tw-bg-orange-700 tw-text-white tw-text-center">
+                <h2 class="tw-text-white tw-font-semibold tw-text-lg">Soal</h2>
+            </div>
+
+            <ol class="tw-w-full tw-px-4 lg:tw-pl-12 lg:tw-pr-8 tw-flex tw-flex-col tw-text-black tw-text-base tw-list-outside tw-list-decimal">
+                
+                @foreach($soalKonfigurasi as $soal)
+                    <div class="tw-w-full tw-mt-4">
+                        <li>{!!$soal->soal!!}</li>
+                        @if(Auth::user()->hasRole('siswa'))
+                            <input name="soal-{{$soal->id}}" type="text" placeholder="Ketikkan jawabanmu di sini" class="tw-bg-white tw-shadow-md tw-rounded-md tw-border-orange-600 tw-border focus:tw-ring-2 focus:tw-ring-orange-600 focus:tw-outline-none tw-px-4 tw-py-2 tw-w-full tw-mt-2">
+                        @else
+                            <p class="tw-mt-2 tw-font-semibold">Jawaban:</p>
+                            <p class="tw-font-semibold">{!!$soal->kunci!!}</p>
+                        @endif
+                    </div>
+                @endforeach
+            </ol>
+
+            <div class="tw-w-full tw-flex tw-justify-end tw-px-8 tw-text-base tw-pt-8">
+                <button type="submit" class="tw-rounded-md tw-bg-orange-700 tw-text-white tw-px-4 tw-py-2 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-orange-600 tw-shadow-md">Simpan Jawaban</button>
+            </div>
+
+        </form>
     </main>
 
     {{-- navigation --}}

@@ -1,4 +1,6 @@
 <?php
+    use Illuminate\Support\Facades\Auth;
+    $soalBohr = App\Models\Soal::where('subbab', 'bohr')->get();
     $title = "Perkembangan Model Atom";
     $subtitle = "Sebuah perjalanan singkat perkembangan model atom";
     $coverUrl = "https://picsum.photos/800/400";
@@ -17,6 +19,11 @@
     @include('styles.bootstrapicons')
 
     @stack('styles')
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.3/dist/katex.min.css" integrity="sha384-ThssJ7YtjywV52Gj4JE/1SQEDoMEckXyhkFVwaf4nDSm5OBlXeedVYjuuUd0Yua+" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.3/dist/katex.min.js" integrity="sha384-Bi8OWqMXO1ta+a4EPkZv7bYGIes7C3krGSZoTGNTAnAn5eYQc7IIXrJ/7ck1drAi" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.3/dist/contrib/mhchem.min.js" integrity="sha384-LIgAiYlGSAdpNC9+YDjDPF6JeS/RRIumtNo0CmyQERZ/+g0h9MbuYQwf/5pQ4Y4M" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.3/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
 </head>
 <body class="roboto tw-bg-gray-100">
 
@@ -240,6 +247,7 @@
             <li>Jika berpindah ke lintasan yang lebih tinggi, elektron akan menyerap energi.</li>
             <li>Jika berpindah ke lintasan yang lebih rendah, elektron akan memancarkan
                 energi.</li>
+            <li>Maksimal elektron yang dapat ditampung oleh kulit ke-<em>n</em> adalah sebanyak 2<em>n</em><sup>2</sup>. Contoh, pada kulit ke-3, maksimal elektron yang dapat ditampung adalah 2(3)<sup>2</sup> = <strong>18</strong>.</li>
         </ol>
         <p class="tw-mt-4"> <span class="highlight tw-bg-yellow-300">Kedudukan elektron-elektron pada tingkat-tingkat energi tertentu yang disebut
             kulit-kulit elektron.</span></p>
@@ -259,6 +267,34 @@
                 <li>Model atom ini tidak dapat digunakan untuk atom yang lebih berat</li>
             </ol>
         </p>
+
+        {{-- soal --}}
+        <form class="tw-bg-orange-300 tw-rounded-lg tw-w-full tw-flex tw-flex-col tw-mt-4 tw-shadow-md tw-pb-4">
+
+            <div class="tw-w-full tw-py-2 tw-rounded-t-lg tw-bg-orange-700 tw-text-white tw-text-center">
+                <h2 class="tw-text-white tw-font-semibold tw-text-lg">Soal</h2>
+            </div>
+
+            <ol class="tw-w-full tw-px-4 lg:tw-pl-12 lg:tw-pr-8 tw-flex tw-flex-col tw-text-black tw-text-base tw-list-outside tw-list-decimal">
+                
+                @foreach($soalBohr as $soal)
+                    <div class="tw-w-full tw-mt-4">
+                        <li>{!!$soal->soal!!}</li>
+                        @if(Auth::user()->hasRole('siswa'))
+                            <input name="soal-{{$soal->id}}" type="text" placeholder="Ketikkan jawabanmu di sini" class="tw-bg-white tw-shadow-md tw-rounded-md tw-border-orange-600 tw-border focus:tw-ring-2 focus:tw-ring-orange-600 focus:tw-outline-none tw-px-4 tw-py-2 tw-w-full tw-mt-2">
+                        @else
+                            <p class="tw-mt-2 tw-font-semibold">Jawaban:</p>
+                            <p class="tw-font-semibold">{!!$soal->kunci!!}</p>
+                        @endif
+                    </div>
+                @endforeach
+            </ol>
+
+            <div class="tw-w-full tw-flex tw-justify-end tw-px-8 tw-text-base tw-pt-8">
+                <button type="submit" class="tw-rounded-md tw-bg-orange-700 tw-text-white tw-px-4 tw-py-2 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-orange-600 tw-shadow-md">Simpan Jawaban</button>
+            </div>
+
+        </form>
 
         {{-- QUANTUM MODEL --}}
         <h1 class="tw-text-black tw-font-semibold tw-pb-1 tw-border-black tw-text-xl tw-border-b tw-text-left tw-mt-8">Model Atom Mekanika Kuantum</h1>

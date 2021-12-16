@@ -15,6 +15,9 @@ class CreateSoalsTable extends Migration
     {
         Schema::create('soals', function (Blueprint $table) {
             $table->id();
+            $table->string('subbab');
+            $table->text('soal');
+            $table->text('kunci');
             $table->timestamps();
         });
     }

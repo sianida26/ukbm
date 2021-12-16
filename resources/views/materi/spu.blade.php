@@ -1,4 +1,7 @@
 <?php
+    use Illuminate\Support\Facades\Auth;
+    $soalSejarah = App\Models\Soal::where('subbab', 'sejarah spu')->get();
+    $soalSifat = App\Models\Soal::where('subbab', 'sifat keperiodikan')->get();
     $title = "Sistem Periodik Unsur";
     $subtitle = "Sejarah dan sifat-sifat keperiodikan";
     $coverUrl = "https://picsum.photos/800/400";
@@ -17,6 +20,11 @@
     @include('styles.bootstrapicons')
 
     @stack('styles')
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.3/dist/katex.min.css" integrity="sha384-ThssJ7YtjywV52Gj4JE/1SQEDoMEckXyhkFVwaf4nDSm5OBlXeedVYjuuUd0Yua+" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.3/dist/katex.min.js" integrity="sha384-Bi8OWqMXO1ta+a4EPkZv7bYGIes7C3krGSZoTGNTAnAn5eYQc7IIXrJ/7ck1drAi" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.3/dist/contrib/mhchem.min.js" integrity="sha384-LIgAiYlGSAdpNC9+YDjDPF6JeS/RRIumtNo0CmyQERZ/+g0h9MbuYQwf/5pQ4Y4M" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.3/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
 </head>
 <body class="roboto tw-bg-gray-100">
 
@@ -192,17 +200,46 @@
 
         <h2 class="tw-text-black tw-font-semibold tw-mt-4">Sistem Periodik Mendeleev</h2>
         <p class="tw-mt-4">Sistem periodik Mendeleev atau sistem periodik bentuk pendek dibuat oleh ilmuwan asal Rusia, Dmitri Ivanovich Mendeleev. Sistem periodik Mendeleev didasarkan atas kenaikan massa atom dan kemiripan sifat. </p>
+        <p class="tw-mt-4">Sistem periodik Mendeleev disusun berdasarkan kenaikan massa atom dan kemiripan sifat. Dari susunan tersebut, didapatkan <span class="highlight tw-bg-blue-300 tw-text-blue-800">hukum periodik</span>, di mana sifat unsur merupakan fungsi periodik dari massa atom. Artinya, bila unsur-unsur tersebut disusun berdasarkan kenaikan massa atomnya, mkaa sifat unsur akan berulang secara periodik.</p>
 
         <img src="{{asset('/storage/assets/mendeleev-periodic-table.png')}}" alt="" class="tw-max-w-lg tw-w-full tw-mx-auto tw-mt-4">
         <p class="tw-text-sm tw-text-center tw-text-gray-700">Sistem Periodik Unsur Mendeleev</p>
 
-        <p class="tw-mt-4">Pada tabel periodik, lajur tegak dinamakan <span class="highlight tw-bg-blue-300 tw-text-blue-800">golongan</span>, sedangkan lajur mendatar disebut dengan <span class="highlight tw-bg-blue-300 tw-text-blue-800">periode</span>. Pada tabel periodik tersebut, dicantumkan pula sifat kimianya. Sebagai contoh: pada golongan I atau <em>Gruppe I</em>, terdapat rumus R<sup>2</sup>O yang menunjukkan bahwa golongan 1 tersebut bila membentuk oksida akan mempunyai rumus H<sub>2</sub>O, Li<sub>2</sub>O, dan Na<sub>2</sub>.</p>
+        <p class="tw-mt-4">Pada tabel periodik, lajur tegak dinamakan <span class="highlight tw-bg-blue-300 tw-text-blue-800">golongan</span>, sedangkan lajur mendatar disebut dengan <span class="highlight tw-bg-blue-300 tw-text-blue-800">periode</span>. Pada tabel periodik tersebut, dicantumkan pula sifat kimianya. Sebagai contoh: pada golongan I atau <em>Gruppe I</em>, terdapat rumus R<sup>2</sup>O yang menunjukkan bahwa golongan 1 tersebut bila membentuk oksida akan mempunyai rumus H<sub>2</sub>O, Li<sub>2</sub>O, dan Na<sub>2</sub>O.</p>
 
         <h2 class="tw-text-black tw-font-semibold tw-mt-4">Sistem Periodik Unsur Modern</h2>
-        <p class="tw-mt-4">Pada sebelum perang dunia I, Henry Moseley berhasil menemukan kesalahan pada tabel periodik yang dibuat oleh Dmitri Mendeleev, yaitu terdapat unsur yang letaknya terbalik. Moseley menemukan bahwa keperiodikan sifat tidak berdasarkan massa atom, tetapi didasarkan oleh nomor atom atau muatan inti. Susunan tabel periodik yang Ia susun akhirnya berkembang lebih baik sampai yang kita gunakan sekarang.</p>
+        <p class="tw-mt-4">Pada sebelum perang dunia I, Henry Moseley berhasil menemukan kesalahan pada tabel periodik yang dibuat oleh Dmitri Mendeleev, yaitu terdapat unsur yang letaknya terbalik. Moseley menemukan bahwa keperiodikan sifat tidak berdasarkan massa atom, tetapi didasarkan oleh nomor atom atau muatan inti. Susunan tabel periodik yang Ia susun akhirnya berkembang lebih baik sampai yang kita gunakan sekarang. </p>
 
         <img src="{{asset('/storage/assets/tabel-periodik.svg')}}" alt="" class="tw-w-full tw-mx-auto tw-mt-4">
         <p class="tw-text-sm tw-text-center tw-text-gray-700 tw-mt-4">Sistem Periodik Unsur. Untuk mode interaktif, <span class="tw-text-blue-500 tw-underline"><a href="https://www.rsc.org/periodic-table">klik di sini</a></span></p>
+
+        {{-- soal sejarah spu --}}
+        <form class="tw-bg-orange-300 tw-rounded-lg tw-w-full tw-flex tw-flex-col tw-mt-4 tw-shadow-md tw-pb-4">
+
+            <div class="tw-w-full tw-py-2 tw-rounded-t-lg tw-bg-orange-700 tw-text-white tw-text-center">
+                <h2 class="tw-text-white tw-font-semibold tw-text-lg">Soal</h2>
+            </div>
+
+            <ol class="tw-w-full tw-px-4 lg:tw-pl-12 lg:tw-pr-8 tw-flex tw-flex-col tw-text-black tw-text-base tw-list-outside tw-list-decimal">
+                
+                @foreach($soalSejarah as $soal)
+                    <div class="tw-w-full tw-mt-4">
+                        <li>{!!$soal->soal!!}</li>
+                        @if(Auth::user()->hasRole('siswa'))
+                            <input name="soal-{{$soal->id}}" type="text" placeholder="Ketikkan jawabanmu di sini" class="tw-bg-white tw-shadow-md tw-rounded-md tw-border-orange-600 tw-border focus:tw-ring-2 focus:tw-ring-orange-600 focus:tw-outline-none tw-px-4 tw-py-2 tw-w-full tw-mt-2">
+                        @else
+                            <p class="tw-mt-2 tw-font-semibold">Jawaban:</p>
+                            <p class="tw-font-semibold">{!!$soal->kunci!!}</p>
+                        @endif
+                    </div>
+                @endforeach
+            </ol>
+
+            <div class="tw-w-full tw-flex tw-justify-end tw-px-8 tw-text-base tw-pt-8">
+                <button type="submit" class="tw-rounded-md tw-bg-orange-700 tw-text-white tw-px-4 tw-py-2 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-orange-600 tw-shadow-md">Simpan Jawaban</button>
+            </div>
+
+        </form>
 
         <h1 class="tw-text-black tw-font-semibold tw-pb-1 tw-border-black tw-text-xl tw-border-b tw-text-left tw-mt-4">Sifat-Sifat Keperiodikan</h1>
         <p class="tw-mt-4">Dengan melihat sistem periodik, kita dapat melihat sifat-sifat yang dimiliki suatu unsur. Beberapa di antaranya adalah:</p>
@@ -241,7 +278,33 @@
         <p class="tw-mt-4">Keelektronegatifan adalah kecenderungan suatu atom dalam menarik pasangan elektron yang digunakan bersama dalam membentuk ikatan. Semakin besar nilai keelektronegatifan suatu atom, maka semakin mudah bagi atom tersebut untuk menarik pasangan elektron ikatan.</p>
         <p class="tw-mt-4"><p class="tw-mt-4">Pada sistem periodik unsur, keelektronegatifan unsur-unsur dalam satu periode dari kiri ke kanan cenderung semakin besar, dan keelektronegatifan unsur-unsur segolongan dari atas ke bawah semakin kecil</p></p>
 
-        
+        {{-- soal sifat keperiodikan --}}
+        <form class="tw-bg-orange-300 tw-rounded-lg tw-w-full tw-flex tw-flex-col tw-mt-4 tw-shadow-md tw-pb-4">
+
+            <div class="tw-w-full tw-py-2 tw-rounded-t-lg tw-bg-orange-700 tw-text-white tw-text-center">
+                <h2 class="tw-text-white tw-font-semibold tw-text-lg">Soal</h2>
+            </div>
+
+            <ol class="tw-w-full tw-px-4 lg:tw-pl-12 lg:tw-pr-8 tw-flex tw-flex-col tw-text-black tw-text-base tw-list-outside tw-list-decimal">
+                
+                @foreach($soalSifat as $soal)
+                    <div class="tw-w-full tw-mt-4">
+                        <li>{!!$soal->soal!!}</li>
+                        @if(Auth::user()->hasRole('siswa'))
+                            <input name="soal-{{$soal->id}}" type="text" placeholder="Ketikkan jawabanmu di sini" class="tw-bg-white tw-shadow-md tw-rounded-md tw-border-orange-600 tw-border focus:tw-ring-2 focus:tw-ring-orange-600 focus:tw-outline-none tw-px-4 tw-py-2 tw-w-full tw-mt-2">
+                        @else
+                            <p class="tw-mt-2 tw-font-semibold">Jawaban:</p>
+                            <p class="tw-font-semibold">{!!$soal->kunci!!}</p>
+                        @endif
+                    </div>
+                @endforeach
+            </ol>
+
+            <div class="tw-w-full tw-flex tw-justify-end tw-px-8 tw-text-base tw-pt-8">
+                <button type="submit" class="tw-rounded-md tw-bg-orange-700 tw-text-white tw-px-4 tw-py-2 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-orange-600 tw-shadow-md">Simpan Jawaban</button>
+            </div>
+
+        </form>
     </main>
 
     {{-- navigation --}}
