@@ -58,7 +58,7 @@
             <div class="tw-flex tw-gap-2 tw-flex-col tw-items-center tw-justify-center">
                 
                 {{-- avatar --}}
-                <img src="https://picsum.photos/200/200" alt="avatar" class="tw-w-12 tw-h-12 tw-rounded-full">
+                <img src="{{asset('/storage/assets/firda.jpg')}}" alt="avatar" class="tw-w-12 tw-h-12 tw-rounded-full">
 
                 {{-- name --}}
                 <div class="tw-w-full tw-flex tw-flex-col tw-items-center">
