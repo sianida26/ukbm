@@ -102,7 +102,7 @@
             {{-- dalton interactive model --}}
             <div class="tw-flex tw-flex-col tw-items-center">
                 <div id="dalton-model" class="" style="height:300px; width:400px;"></div>
-                <p class="tw-text-sm tw-text-center tw-mt-2">Model atom Dalton menyerupai bola pejal</p>
+                <p class="tw-text-sm tw-text-center tw-mt-2">Model atom Dalton menyerupai bola pejal (gambar dapat digerakkan)</p>
             </div>
         </div>
 
@@ -145,7 +145,7 @@
             <div class="tw-flex tw-flex-col tw-items-center">
                 {{-- <img src="{{asset('/storage/assets/thomson-model.png')}}" alt="Model Atom J. J. Thomson" class="tw-h-64"> --}}
                 <div id="thomson-model" class="" style="height:200px; width:200px;"></div>
-                <p class="tw-text-sm tw-text-center tw-mt-1">Coba putar bola di atas</p>
+                <p class="tw-text-sm tw-text-center tw-mt-1">gambar dapat digerakkan</p>
             </div>
         </div>
         <p class="tw-text-sm tw-text-center tw-mt-2">Model atom J. J. Thomson berbentuk seperti roti kisimis, elektron tersebar di dalam atom</p>
@@ -215,7 +215,7 @@
         <div class="tw-flex tw-flex-col tw-items-center">
             {{-- <img src="{{asset('/storage/assets/rutherford-model.png')}}" alt="Model Atom Rutherford" class=""> --}}
             <div id="rutherford-model" style="height: 200px; width: 200px;"></div>
-            <p class="tw-text-sm tw-text-center tw-mt-2">Model atom Rutherford seperti tata surya</p>
+            <p class="tw-text-sm tw-text-center tw-mt-2">Model atom Rutherford seperti tata surya (gambar dapat digerakkan)</p>
         </div>
 
         <h2 class="tw-text-black tw-font-semibold tw-mt-4">Kelemahan model atom Rutherford</h2>
