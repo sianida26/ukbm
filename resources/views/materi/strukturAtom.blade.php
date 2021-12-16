@@ -90,7 +90,7 @@
         <div class="tw-flex tw-items-center tw-flex-col tw-gap-4 tw-justify-center tw-mt-4">
 
             <div class="tw-flex tw-flex-col tw-items-center">
-                <img src="{{asset('/storage/assets/cathode-ray-tube.jpg')}}" alt="Percobaan tabung sinar katoda" class="">
+                <img src="{{asset('/storage/assets/cathode-ray-tube-renamed.jpg')}}" alt="Percobaan tabung sinar katoda" class="">
                 <p class="tw-text-sm tw-text-center tw-mt-2">Percobaan tabung sinar katoda</p>
             </div>
         </div>
