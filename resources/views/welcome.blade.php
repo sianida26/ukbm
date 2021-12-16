@@ -96,7 +96,8 @@
             <div class="tw-flex tw-flex-col tw-flex-grow tw-flex-1 tw-justify-center tw-items-center tw-px-4 tw-gap-2 tw-max-w-screen-lg tw-self-center lg:tw-text-left lg:tw-items-start">
                 <h2 class="tw-text-2xl lg:tw-text-4xl tw-font-semibold">UKBM (Unit Kegiatan Belajar Mandiri)</h2>
                 <h1 class="tw-text-4xl lg:tw-text-6xl tw-font-bold">Struktur Atom dan Sistem Periodik Unsur</h1>
-                <span class="tw-self-start">Oleh: Firda Amalia</span>
+                <span class="tw-self-start">Penyusun: Firda Amalia</span>
+                <span class="tw-self-start">Dosen Pembimbing: Drs. Ridwan Joharmawan, M.Si.</span>
 
                 <button class="tw-mt-4 tw-bg-orange-500 lg:tw-text-lg tw-text-white tw-rounded-md tw-px-3 tw-py-2 tw-self-end">Ayo Mulai Belajar ^_^</button>
             </div>

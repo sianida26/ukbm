@@ -27,6 +27,8 @@
             {{-- <p class="tw-text-3xl">Fulan bin Fulanah</p> --}}
             <p class="tw-text-2xl lg:tw-text-5xl">{{Auth::user()->name}}</p>
             <p class="">di UKBM Materi Struktur Atom dan Sistem Periodik Unsur</p>
+            <p class="tw-text-sm">Penyusun: Firda Amalia</p>
+            <p class="tw-text-sm">Dosen Pembimbing: Drs. Ridwan Joharmawan, M.Si.</p>
         </div>
 
         {{-- actions --}}
