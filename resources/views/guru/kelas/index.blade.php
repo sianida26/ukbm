@@ -136,7 +136,7 @@
 
     </div>
 
-    <div class="tw-my-4 tw-text-center">&copy; 2021 opo ngunu</div>
+    <div class="tw-my-4 tw-text-center">@include('copyright')</div>
 
     @stack('scripts')
 

@@ -203,6 +203,6 @@
         </div>
     </section>
 
-    <p class="tw-text-center tw-text-sm tw-py-4">&copy; Chesa & Firda 2021</p>
+    <p class="tw-text-center tw-text-sm tw-py-4">@include('copyright')</p>
 </body>
 </html>

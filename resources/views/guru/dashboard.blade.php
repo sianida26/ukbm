@@ -60,7 +60,7 @@
     </main>
 
     {{-- copyright --}}
-    <p class="tw-text-center tw-font-medium tw-text-gray-500 tw-my-4">&copy; Firda Amalia 2021</p>
+    <p class="tw-text-center tw-font-medium tw-text-gray-500 tw-my-4">@include('copyright')</p>
 
     <script>
         window.addEventListener('load', function(){
