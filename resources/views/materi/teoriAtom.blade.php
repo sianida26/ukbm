@@ -80,13 +80,13 @@
 
         <div class="tw-flex tw-items-center tw-flex-col tw-gap-4 md:tw-flex-row md:tw-justify-between">
             {{-- democritus image --}}
-            <div class="tw-flex tw-items-center tw-justify-center">
+            <div class="tw-flex tw-flex-col tw-items-center tw-justify-center">
                 <img src="{{asset('/storage/assets/democritus.jpg')}}" alt="democritus" class="tw-h-64">
                 <p class="tw-text-sm tw-text-center tw-mt-2">Democritus (460 - 370 BC)</p>
             </div>
 
             {{-- dalton image --}}
-            <div class="tw-flex tw-items-center tw-justify-center">
+            <div class="tw-flex tw-flex-col tw-items-center tw-justify-center">
                 <img src="{{asset('/storage/assets/dalton.jpg')}}" alt="John Dalton" class="tw-h-64">
                 <p class="tw-text-sm tw-text-center tw-mt-2">John Dalton (1766 - 1844)</p>
             </div>
