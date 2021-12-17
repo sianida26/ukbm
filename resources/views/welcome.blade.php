@@ -82,6 +82,8 @@
                 <span>
                     @if(Auth::user()->hasRole('guru'))
                         <a href="/dashboard" class="bi bi-house-fill tw-text-white tw-text-2xl"></a>
+                    @else
+                        <a href="/cara-penggunaan" class="bi bi-info-circle-fill tw-text-white tw-text-2xl"></a>
                     @endif
                 </span>
                 
