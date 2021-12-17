@@ -1,5 +1,6 @@
 <?php
     use Illuminate\Support\Facades\Auth;
+    use App\Models\Jawaban;
     $title = "Tanda Atom";
     $subtitle = "Sekilas materi mengenai notasi atom";
     $coverUrl = asset('/storage/assets/inti-atom.svg');

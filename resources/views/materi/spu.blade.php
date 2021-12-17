@@ -1,5 +1,6 @@
 <?php
     use Illuminate\Support\Facades\Auth;
+    use App\Models\Jawaban;
     $soalSejarah = App\Models\Soal::where('subbab', 'sejarah spu')->get();
     $soalSifat = App\Models\Soal::where('subbab', 'sifat keperiodikan')->get();
     $title = "Sistem Periodik Unsur";

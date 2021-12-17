@@ -1,5 +1,6 @@
 <?php
     use Illuminate\Support\Facades\Auth;
+    use App\Models\Jawaban;
     $soalBohr = App\Models\Soal::where('subbab', 'bohr')->get();
     $title = "Perkembangan Model Atom";
     $subtitle = "Sebuah perjalanan singkat perkembangan model atom";

@@ -38,7 +38,7 @@
             <x-btn-fitur icon="people-fill" text="List Kelas" color="#F97316" link="/kelas" /> 
             <x-btn-fitur icon="person-fill" text="List Siswa" color="#22C55E" link="/siswa" /> 
             <x-btn-fitur icon="book" text="Materi" color="#8B5CF6" link="/" /> 
-            <x-btn-fitur icon="journal-check" text="Jawaban" color="#F43F5E" link="/jawaban" /> 
+            <x-btn-fitur icon="journal-check" text="Jawaban" color="#F43F5E" link="{{route('jawaban.kelas')}}" /> 
         </div>
 
 

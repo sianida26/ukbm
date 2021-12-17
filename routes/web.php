@@ -54,6 +54,15 @@ Route::middleware('auth')->group(function () {
             // Route::post('/{id}/submitEdit', [KelasController::class, 'siswaEditSubmit'])->name('siswa.editSubmit');
             // Route::delete('/{id}/delete', [KelasController::class, 'siswaDestroy'])->name('siswa.destroy');
         });
+
+        //jawaban route group
+        Route::group(['prefix' => 'jawaban'], function () {
+            Route::view('/kelas', 'guru.jawaban.kelas')->name('jawaban.kelas');
+            // Route::view('/kelas/{id}', 'guru.jawaban.siswa')->name('jawaban.listsiswa');
+            Route::get('/kelas/{id}', [JawabanController::class, 'listsiswa'])->name('jawaban.listsiswa');
+            Route::get('/siswa/{id}', [JawabanController::class, 'detailjawaban'])->name('jawaban.detail');
+            Route::post('submitnilai', [JawabanController::class, 'submitnilai'])->name('jawaban.submitnilai');
+        });
     });
 
     //RUTE UNTUK SISWA

@@ -1,6 +1,7 @@
 <?php
 
     use Illuminate\Support\Facades\Auth;
+    use App\Models\Jawaban;
 
     $title = "Teori Tentang Atom";
     $subtitle = "Penjelasan mendasar mengenai atom";

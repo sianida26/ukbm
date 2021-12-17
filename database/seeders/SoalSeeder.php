@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Soal;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class SoalSeeder extends Seeder
 {
@@ -312,7 +313,9 @@ class SoalSeeder extends Seeder
 
     public function run()
     {
-        Soal::truncate();
+        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+        DB::table('soals')->truncate();
+        DB::statement('SET FOREIGN_KEY_CHECKS=1;');
         //write soals to database 
         foreach (self::soals as $soal) {
             $subbab = $soal['subbab'];
