@@ -5,7 +5,7 @@
     $soalKonfigurasi = App\Models\Soal::where('subbab', 'konfigurasi')->get();
     $title = "Teori Atom Mekanika Kuantum";
     $subtitle = "";
-    $coverUrl = "https://picsum.photos/800/400";
+    $coverUrl = asset('/storage/assets/cover-quantum.jpeg');
     $coverDescription = "";
 ?>
 <!DOCTYPE html>

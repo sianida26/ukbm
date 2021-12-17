@@ -4,7 +4,7 @@
     $soalBohr = App\Models\Soal::where('subbab', 'bohr')->get();
     $title = "Perkembangan Model Atom";
     $subtitle = "Sebuah perjalanan singkat perkembangan model atom";
-    $coverUrl = "https://picsum.photos/800/400";
+    $coverUrl = asset('/storage/assets/cover-perkembangan-model-atom.png');
     $coverDescription = "";
 ?>
 <!DOCTYPE html>

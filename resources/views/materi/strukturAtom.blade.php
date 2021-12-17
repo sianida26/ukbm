@@ -1,7 +1,7 @@
 <?php
     $title = "Struktur Atom";
     $subtitle = "Membahas tentang atom dan isinya";
-    $coverUrl = "https://picsum.photos/800/400";
+    $coverUrl = asset('/storage/assets/cover-struktur-atom.png');
     $coverDescription = "";
 ?>
 <!DOCTYPE html>

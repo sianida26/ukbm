@@ -5,8 +5,8 @@
     $soalSifat = App\Models\Soal::where('subbab', 'sifat keperiodikan')->get();
     $title = "Sistem Periodik Unsur";
     $subtitle = "Sejarah dan sifat-sifat keperiodikan";
-    $coverUrl = "https://picsum.photos/800/400";
-    $coverDescription = "";
+    $coverUrl = asset('/storage/assets/cover-spu.gif');
+    $coverDescription = "Di dunia ini terdapat banyak sekali unsur. Setiap unsur memiliki sifatnya masing-masing. Beberapa di antaranya dapat memberikan warna yang indah jika terbakar.";
 ?>
 <!DOCTYPE html>
 <html lang="en">
