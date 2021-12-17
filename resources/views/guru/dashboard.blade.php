@@ -48,13 +48,13 @@
             <p class="tw-bg-sky-500 tw-py-2 tw-rounded-t-lg tw-text-white tw-text-xl tw-font-medium tw-text-center">Cara Penggunaan</p>
             <div class="tw-px-8 tw-mt-4">
                 <ul class="tw-list-disc tw-list-outside tw-font-medium tw-flex tw-gap-2 tw-flex-col">
-                    <li>Login aplikasi UKBM dapat dilakukan melalui username yang berupa NIP dan password yang diberikan oleh admin.</li>
+                    <li>Login aplikasi UKBM dapat dilakukan melalui username dan password yang diberikan oleh admin.</li>
                     <li>Aplikasi ini memiliki beberapa fitur, yaitu profil, list kelas, list siswa, materi, dan asesmen.</li>
                     <li>Dalam fitur profil terdapat nama pengguna, username, dan tombol logout.</li>
                     <li>Dalam fitur list kelas dapat dilihat list kelas yang terdaftar menggunakan aplikasi UKBM ini. Aksi yang dapat dilakukan antara lain: edit kelas, tambah kelas, hapus kelas. Setiap kelas yang telah dihapus tidak dapat dikembalikan lagi.</li>
                     <li>Dalam fitur list siswa dapat dilihat list siswa yang terdaftar menggunakan aplikasi UKBM ini. Aksi yang dapat dilakukan antara lain: edit siswa, tambah siswa, hapus siswa. Setiap siswa yang telah dihapus tidak dapat dikembalikan lagi.</li>
                     <li>Dalam fitur materi terdapat kompetensi, tujuan pembelajaran, karakter yang dikembangkan, peta konsep, ringkasan materi mengenai Struktur Atom dan Sistem Periodik Unsur, soal latihan dan soal evaluasi akhir.</li>
-                    <li>Dalam fitur asesmen terdapat list siswa yang telah mengerjakan setiap soal yang tersedia beserta jawabannya, kisi-kisi jawaban, dan kolom input nilai. Jawaban siswa dapat diubah sampai guru submit nilai.</li>
+                    <li>Dalam fitur asesmen terdapat list siswa yang telah mengerjakan setiap soal yang tersedia beserta jawabannya, kisi-kisi jawaban, dan kolom input nilai.</li>
                 </ul>
             </div>
         </div>
