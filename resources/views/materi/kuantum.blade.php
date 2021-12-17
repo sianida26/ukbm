@@ -34,9 +34,9 @@
 
         <span>
             @if(Auth::user()->hasRole('guru'))
-                        <a href="/dashboard" class="bi bi-house-fill tw-text-white tw-text-2xl"></a>
+                        <a href="/dashboard" class="bi bi-house-fill tw-text-2xl"></a>
                     @else
-                        <a href="/cara-penggunaan" class="bi bi-info-circle-fill tw-text-white tw-text-2xl"></a>
+                        <a href="/cara-penggunaan" class="bi bi-info-circle-fill tw-text-2xl"></a>
                     @endif
         </span>
         
@@ -188,13 +188,13 @@
         <h2 class="tw-text-black tw-font-semibold tw-mt-4">Subkulit <em>p</em></h2>
         <p class="tw-mt-4">Subkulit <em>p</em> tersusun dari tiga orbital dengan bilangan kuantum <em>l</em> = 1. Tiga orbital <em>p</em> tersebut adalah orbital <em>p<sub>x</sub></em>, <em>p<sub>y</sub></em>, <em>p<sub>z</sub></em>. Bentuk ruang orbital <em>p</em> digambarkan seperti dumbell dengan probabilitas untuk menemukan elektron semakin kecil bila mendekati inti.</p>
 
-        <img src="{{asset('/storage/assets/orbital-p.png')}}" alt="" class="tw-max-w-sm tw-mx-auto">
+        <img src="{{asset('/storage/assets/orbital-p.png')}}" alt="" class="tw-max-w-full md:tw-max-w-sm tw-mx-auto">
         <p class="tw-text-center tw-text-sm">Bentuk orbital <em>p</em></p>
 
         <h2 class="tw-text-black tw-font-semibold tw-mt-4">Subkulit <em>d</em></h2>
         <p class="tw-mt-4">Subkulit <em>d</em> tersusun dari lima orbital yang mempunyai bilangan kuantum <em>l</em> = 2. Arah orientasi dari orbital <em>d</em> dapat dibedakan menjadi dua kelompok, yaitu yang berada di antara sumbu terdiri dari 3 orbital (<em>d<sub>xy</sub></em>, <em>d<sub>xz</sub></em>, <em>d<sub>yz</sub></em>) dan yang berada pada sumbu terdiri dari 2 orbital (<em>d<sub>x<sup>2</sup> - y<sup>2</sup></sub> dan <em>d<sub>z<sup>2</sup></sub></em></em>) </p>
 
-        <img src="{{asset('/storage/assets/orbital-d.png')}}" alt="" class="tw-max-w-lg tw-w-full tw-mx-auto">
+        <img src="{{asset('/storage/assets/orbital-d.png')}}" alt="" class="tw-max-w-full md:tw-max-w-sm tw-mx-auto">
         <p class="tw-text-center tw-text-sm">Bentuk orbital <em>d</em></p>
 
         {{-- soal kuantum --}}
@@ -235,7 +235,7 @@
         <h2 class="tw-text-black tw-font-semibold tw-mt-4">Aturan Aufbau</h2>
         <p class="tw-mt-4">Subkulit dengan energi terendah adalah subkulit 1<em>s</em> yang tersusun dari 1 orbital. 1 Elektron pada atom hidrogen akan menempati orbital 1<em>s</em> ketika pada keadaan dasar. Ketika kita berlanjut ke atom berikutnya, helium, litium, dan seterusnya, maka elektron akan menempati subkulit pada tingkat energi yang lebih tinggi. 2<em>s</em>, 2<em>p</em>, 3<em>s</em> dan seterusnya. Prinsip Aufbau mengatakan bahwa <span class="highlight tw-bg-yellow-300">elektron akan menempati orbital energi rendah ke orbital energi yang lebih tinggi secara berurutan</span>. Prinsip ini kadang disebut juga sebagai prinsip membangun. (<em>Aufbau</em> dalam bahasa Jerman berarti membangun). </p>
 
-        <img src="{{asset('/storage/assets/aufbau.png')}}" alt="" class="tw-max-w-lg tw-w-full tw-mx-auto">
+        <img src="{{asset('/storage/assets/aufbau.png')}}" alt="" class="tw-max-w-full md:tw-max-w-lg tw-mx-auto">
 
         <p class="tw-mt-4">Berdasarkan diagram di atas, maka tingkat energi dari yang paling rendah adalah sebagai berikut: <strong>1<em>s</em> < 2<em>s</em> < 2<em>p</em> < 3<em>s</em> < 3<em>p</em> < 4<em>s</em> < 3<em>d</em> < 4<em>p</em> < ... dan seterusnya</strong></p>
 
@@ -247,7 +247,7 @@
             {{-- alert content --}}
             <div class="tw-flex-grow tw-py-4 tw-px-4">
                 <h2 class="tw-text-black tw-font-semibold tw-bg-text-sky-800">Contoh:</h2>
-                <img src="{{asset('/storage/assets/pauli-exclusion-principle.png')}}" alt="" class="tw-max-w-sm tw-mt-4">
+                <img src="{{asset('/storage/assets/pauli-exclusion-principle.png')}}" alt="" class="tw-max-w-full md:tw-max-w-sm tw-mx-auto">
 
                 <p class="tw-mt-4">Berdasarkan gambar tersebut, orbital 2<em>s</em> pada atom berilium terisi oleh 2 elektron. elektron pada orbital yang sama harus memiliki spin yang berlawanan. jika tidak berlawanan maka kedua elektron tersebut memiliki keempat bilangan kuantum yang sama sehingga melanggar larangan Pauli</p>
                 
@@ -268,7 +268,7 @@
             {{-- alert content --}}
             <div class="tw-flex-grow tw-py-4 tw-px-4">
                 <h2 class="tw-text-black tw-font-semibold tw-bg-text-sky-800">Contoh 1:</h2>
-                <img src="{{asset('/storage/assets/N.svg')}}" alt="" class="tw-max-w-sm tw-mt-4 tw-mx-auto">
+                <img src="{{asset('/storage/assets/N.svg')}}" alt="" class="tw-max-w-full md:tw-max-w-sm tw-mx-auto">
 
                 <p class="tw-mt-4">Orbital-orbital p pada gambar di atas terisi setengah penuh semua terlebih dahulu sebelum elektron dipasangkan</p>
                 
@@ -281,7 +281,7 @@
             {{-- alert content --}}
             <div class="tw-flex-grow tw-py-4 tw-px-4">
                 <h2 class="tw-text-black tw-font-semibold tw-bg-text-sky-800">Contoh 2:</h2>
-                <img src="{{asset('/storage/assets/O.svg')}}" alt="" class="tw-max-w-sm tw-mt-4 tw-mx-auto">
+                <img src="{{asset('/storage/assets/O.svg')}}" alt="" class="tw-max-w-full md:tw-max-w-sm tw-mx-auto">
 
                 <p class="tw-mt-4">setelah orbital-orbital telah terisi setengah penuh, maka elektron akan berpasangan dengan elektron pada orbital setengah penuh</p>
                 
